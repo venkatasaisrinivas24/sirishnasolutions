@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sirishna Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        main {
+            padding-top: 160px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .container-flex {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+
+        .top-bar {
+            background-color: #0d47a1;
+            color: white;
+            padding: 8px 0;
+            font-size: 0.8rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social-media a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #64b5f6;
+        }
+
+        .main-nav {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0d47a1;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .company-slogan {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #666;
+            font-style: italic;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar-close,
+        .sidebar-header,
+        .nav-overlay {
+            display: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0d47a1;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10001;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-toggle:hover {
+            background-color: #f0f0f0;
+            color: #0d47a1;
+        }
+
+        body.menu-open .menu-toggle {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .alert-bar {
+            background-color: white;
+            color: #dc3545;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 500;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+
+        .alert-bar .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 30s linear infinite;
+            padding-left: 100%;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Page Header */
+        .page-header {
+            background: url('images/hero.jpeg') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(13, 71, 161, 0.7);
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Section Styles */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #0d47a1;
+            margin: 0 auto 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* CEO Section */
+        .ceo-section {
+            background-color: #f8f9fa;
+        }
+
+        .ceo-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .ceo-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .ceo-image-wrapper:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .ceo-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .ceo-image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .ceo-info {
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .ceo-info h3 {
+            font-size: 2rem;
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+
+        .ceo-info .position {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .ceo-info p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .ceo-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .ceo-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .ceo-contact-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .ceo-contact-item i {
+            font-size: 1.5rem;
+            color: #0d47a1;
+        }
+
+        .ceo-contact-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Company Story */
+        .story-section {
+            background: white;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .story-card {
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .story-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .story-card:hover {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .story-card-icon {
+            width: 60px;
+            height: 60px;
+            background: #0d47a1;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .story-card h3 {
+            font-size: 1.5rem;
+            color: #0d47a1;
+            margin-bottom: 15px;
+        }
+
+        .story-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Values Section */
+        .values-section {
+            background: #e3f2fd;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .value-card.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            color: #0d47a1;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #0d47a1;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #64b5f6;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-section {
+            background: white;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .why-choose-card {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #0d47a1;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .why-choose-card.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .why-choose-card:hover {
+            background: white;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        .why-choose-icon {
+            width: 60px;
+            height: 60px;
+            background: #0d47a1;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .why-choose-content h3 {
+            font-size: 1.3rem;
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+
+        .why-choose-content p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Services Overview Section */
+        .services-overview-section {
+            background: #e3f2fd;
+        }
+
+        .services-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-overview-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-overview-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-overview-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-overview-icon {
+            width: 100px;
+            height: 100px;
+            background: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 3rem;
+            color: #0d47a1;
+            transition: all 0.3s ease;
+        }
+
+        .service-overview-card:hover .service-overview-icon {
+            background: #0d47a1;
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .service-overview-card h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-overview-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-overview-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .service-overview-card ul li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-overview-card ul li i {
+            color: #0d47a1;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            max-width: 100%;
+        }
+
+        .footer-logo-section {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-column .footer-logo {
+            height: 50px;
+            width: auto;
+            display: block;
+            -o-object-fit: contain;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .footer-company-info {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-company-slogan {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #bdc3c7;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-column h5 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            line-height: 1.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+
+        .footer-column ul a:hover {
+            color: #64b5f6;
+            padding-left: 5px;
+        }
+
+        .contact-info-footer li {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-footer i {
+            margin-right: 15px;
+            color: #64b5f6;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-socials {
+            margin-bottom: 15px;
+        }
+
+        .footer-socials a {
+            color: #bdc3c7;
+            font-size: 1.3rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: #64b5f6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container,
+            .container-flex {
+                padding: 0 20px;
+            }
+
+            main {
+                padding-top: 150px;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .page-header {
+                height: 35vh;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .ceo-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .ceo-info h3 {
+                font-size: 1.8rem;
+            }
+
+            .ceo-info .position {
+                font-size: 1.1rem;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                width: 100%;
+                overflow: hidden;
+                justify-items: center;
+            }
+
+            .story-card {
+                padding: 30px 25px;
+                max-width: 100%;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .story-card-icon {
+                margin: 0 auto 20px;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+                width: 100%;
+                overflow: hidden;
+                justify-items: center;
+            }
+
+            .value-card {
+                max-width: 100%;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .value-card {
+                padding: 35px 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                justify-items: center;
+            }
+
+            .stat-card {
+                text-align: center;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                justify-items: center;
+            }
+
+            .why-choose-card {
+                padding: 25px 20px;
+                text-align: center;
+            }
+
+            .why-choose-icon {
+                margin: 0 auto 15px;
+            }
+
+            .services-overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+                width: 100%;
+                overflow: hidden;
+                justify-items: center;
+            }
+
+            .service-overview-card {
+                max-width: 100%;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .service-overview-card {
+                padding: 35px 25px;
+            }
+
+            .service-overview-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-logo-section {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+            }
+
+            .footer-company-name {
+                font-size: 1.1rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 0.8rem;
+            }
+
+            .menu-toggle {
+                display: block !important;
+                z-index: 10002 !important;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: white;
+                z-index: 10000;
+                overflow-y: auto;
+                box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+                padding: 70px 0 20px 0;
+                margin: 0;
+                transition: right 0.4s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .sidebar-close,
+            .sidebar-header {
+                display: block !important;
+            }
+
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 9998;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+            }
+
+            .nav-overlay.active {
+                display: block !important;
+                opacity: 1;
+            }
+
+            body.menu-open {
+                overflow: hidden;
+            }
+
+            .nav-links li {
+                margin: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 18px 30px;
+                border-left: 4px solid transparent;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                background-color: #e3f2fd;
+                border-left-color: #0d47a1;
+            }
+
+            .sidebar-close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                font-size: 1.5rem;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+
+            .sidebar-close:hover {
+                background-color: #f0f0f0;
+                color: #0d47a1;
+            }
+
+            .sidebar-header {
+                padding: 15px 30px;
+                border-bottom: 2px solid #0d47a1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: white;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+
+            .sidebar-header h3 {
+                font-size: 1.1rem;
+                color: #0d47a1;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            .container,
+            .container-flex {
+                padding: 0 15px;
+                margin: 0 auto;
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            .section-padding {
+                padding: 50px 0;
+                overflow: hidden;
+            }
+
+            .top-bar {
+                font-size: 0.75rem;
+                padding: 6px 0;
+            }
+
+            main {
+                padding-top: 140px;
+            }
+
+            .top-bar .container-flex {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .contact-info {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .social-media {
+                display: flex;
+                justify-content: center;
+            }
+
+            .main-nav {
+                padding: 10px 0;
+                min-height: 70px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo-img {
+                height: 45px;
+            }
+
+            .page-header {
+                height: 30vh;
+                padding: 0 15px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.9rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .section-title p {
+                font-size: 0.95rem;
+            }
+
+            .ceo-image-wrapper {
+                margin-bottom: 20px;
+            }
+
+            .ceo-info h3 {
+                font-size: 1.6rem;
+            }
+
+            .ceo-info .position {
+                font-size: 1rem;
+            }
+
+            .ceo-info p {
+                font-size: 0.95rem;
+            }
+
+            .ceo-contact-item {
+                padding: 12px 15px;
+            }
+
+            .story-card {
+                padding: 25px 20px;
+            }
+
+            .story-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .story-card-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .value-card {
+                padding: 30px 20px;
+            }
+
+            .value-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stat-card {
+                padding: 25px 15px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .why-choose-card {
+                padding: 20px 15px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .why-choose-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                margin: 0 auto 15px;
+            }
+
+            .services-overview-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-overview-card {
+                padding: 30px 20px;
+            }
+
+            .service-overview-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+
+            .service-overview-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-overview-card p {
+                font-size: 0.95rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-brand {
+                grid-column: 1;
+            }
+
+            .footer-logo {
+                height: 40px;
+            }
+
+            .footer-logo-section {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .footer-company-name {
+                font-size: 1rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 0.75rem;
+            }
+
+            .footer-column h5 {
+                font-size: 1.1rem;
+            }
+
+            .footer-column p,
+            .footer-column ul li {
+                font-size: 0.9rem;
+            }
+
+            .company-name {
+                font-size: clamp(0.85rem, 3vw, 1rem);
+                white-space: normal;
+                line-height: 1.1;
+            }
+
+            .company-slogan {
+                font-size: clamp(0.65rem, 2vw, 0.75rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container,
+            .container-flex {
+                padding: 0 12px;
+            }
+
+            .section-padding {
+                padding: 40px 0;
+            }
+
+            main {
+                padding-top: 130px;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .company-name {
+                font-size: 0.8rem;
+            }
+
+            .company-slogan {
+                font-size: 0.6rem;
+            }
+
+            .page-header {
+                height: 25vh;
+                padding: 0 12px;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.85rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 0.9rem;
+            }
+
+            .ceo-info h3 {
+                font-size: 1.4rem;
+            }
+
+            .ceo-info .position {
+                font-size: 0.95rem;
+            }
+
+            .ceo-info p {
+                font-size: 0.9rem;
+            }
+
+            .ceo-contact-item {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+
+            .ceo-contact-item i {
+                font-size: 1.2rem;
+            }
+
+            .story-card {
+                padding: 20px 15px;
+            }
+
+            .story-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .story-card p {
+                font-size: 0.9rem;
+            }
+
+            .story-card-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            .value-card {
+                padding: 25px 15px;
+            }
+
+            .value-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .value-card p {
+                font-size: 0.9rem;
+            }
+
+            .value-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+
+            .stat-card {
+                padding: 20px 10px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.95rem;
+            }
+
+            .why-choose-card {
+                padding: 18px 12px;
+            }
+
+            .why-choose-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            .why-choose-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .why-choose-content p {
+                font-size: 0.9rem;
+            }
+
+            .service-overview-card {
+                padding: 25px 15px;
+            }
+
+            .service-overview-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+
+            .service-overview-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .service-overview-card p {
+                font-size: 0.9rem;
+            }
+
+            .service-overview-card ul li {
+                font-size: 0.85rem;
+            }
+
+            .footer-logo {
+                height: 35px;
+            }
+
+            .footer-company-name {
+                font-size: 0.9rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 0.7rem;
+            }
+
+            .footer-column h5 {
+                font-size: 1rem;
+            }
+
+            .footer-column p,
+            .footer-column ul li {
+                font-size: 0.85rem;
+            }
+
+            .footer-socials a {
+                font-size: 1.1rem;
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .container,
+            .container-flex {
+                padding: 0 10px;
+            }
+
+            .company-name {
+                font-size: 0.75rem;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+
+            .page-header h1 {
+                font-size: 1.3rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Small tablets / Large phones landscape (481px - 600px) */
+        @media (min-width: 481px) and (max-width: 600px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Tablets portrait (601px - 768px) */
+        @media (min-width: 601px) and (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-logo-section {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        /* iPad / Tablets landscape (769px - 834px) */
+        @media (min-width: 769px) and (max-width: 834px) {
+            .values-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .services-overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large tablets / Small laptops (835px - 992px) */
+        @media (min-width: 835px) and (max-width: 992px) {
+            .values-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .services-overview-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Desktop (993px - 1200px) */
+        @media (min-width: 993px) and (max-width: 1200px) {
+            .container,
+            .container-flex {
+                max-width: 960px;
+            }
+        }
+
+        /* Large desktops (1201px - 1440px) */
+        @media (min-width: 1201px) and (max-width: 1440px) {
+            .container,
+            .container-flex {
+                max-width: 1140px;
+            }
+        }
+
+        /* Extra large desktops / 4K (1921px and above) */
+        @media (min-width: 1921px) {
+            .container,
+            .container-flex {
+                max-width: 1600px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 50px;
+            }
+
+            .footer-logo {
+                height: 60px;
+            }
+
+            .footer-company-name {
+                font-size: 1.4rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 1rem;
+            }
+        }
+
+        /* 5K displays (2560px and above) */
+        @media (min-width: 2560px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 80px;
+            }
+
+            .footer-logo {
+                height: 80px;
+            }
+
+            .footer-company-name {
+                font-size: 1.8rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 1.2rem;
+            }
+
+            .footer-column h5 {
+                font-size: 2rem;
+            }
+
+            .footer-column p,
+            .footer-column ul li {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Ultra-wide monitors (21:9) */
+        @media (min-aspect-ratio: 21/9) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+
+        /* Super ultra-wide (32:9) */
+        @media (min-aspect-ratio: 32/9) {
+            .container,
+            .container-flex {
+                max-width: 2400px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container-flex">
+                <div class="contact-info">
+                    <span>Hotline / Cell: +919908576007 / +917997153114</span>
+                    <span>Email ID: sireeshnasolutions@gmail.com</span>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container-flex">
+                <div class="logo">
+                    <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                        alt="Sirishna Solutions Logo" class="logo-img">
+                    <div class="company-info">
+                        <span class="company-name">SIREESHNA SOLUTIONS PVT LTD</span>
+                        <span class="company-slogan">We Make IT Happen</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <div class="sidebar-header">
+                        <h3>Menu</h3>
+                    </div>
+                    <span class="sidebar-close"><i class="fas fa-times"></i></span>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-overlay"></div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="alert-bar">
+            <div class="scrolling-text">
+                🎉 New Batch Starting Soon! Enroll Now for IT Training Programs | Job Placement Assistance Available | Visa Processing Services for USA, Canada, UK & More
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>About Us</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / About Us
+                </div>
+            </div>
+        </section>
+
+        <!-- CEO Section -->
+        <section class="ceo-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Meet Our CEO & Founder</h2>
+                    <div class="divider"></div>
+                    <p>Visionary leadership driving innovation and excellence</p>
+                </div>
+                <div class="ceo-content">
+                    <div class="ceo-image-wrapper">
+                        <img src="images/aboutus.jpeg" alt="Ramisetti Tejaswini Padmaja">
+                    </div>
+                    <div class="ceo-info">
+                        <h3>Ramisetti Tejaswini Padmaja</h3>
+                        <p class="position">CEO & Founder of Sireeshna Solutions Pvt Ltd</p>
+                        <p>With a passion for technology and a vision to empower businesses and individuals, Ramisetti Tejaswini Padmaja founded Sireeshna Solutions to bridge the gap between talent and opportunity. Under her leadership, the company has grown into a trusted partner for IT services, professional training, job placements, and visa processing.</p>
+                        <p>Her commitment to excellence and innovation has helped countless professionals achieve their career goals while enabling businesses to leverage cutting-edge technology solutions. She believes in creating value through quality service delivery and building long-term relationships with clients and candidates alike.</p>
+                        <div class="ceo-contact">
+                            <div class="ceo-contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+919908576007">+91 9908576007</a>
+                            </div>
+                            <div class="ceo-contact-item">
+                                <i class="fas fa-building"></i>
+                                <a href="tel:+917997153114">+91 7997153114 (Office)</a>
+                            </div>
+                            <div class="ceo-contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Vijayawada, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Story -->
+        <section class="story-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Story</h2>
+                    <div class="divider"></div>
+                    <p>Building bridges between talent and opportunity</p>
+                </div>
+                <div class="story-grid">
+                    <div class="story-card">
+                        <div class="story-card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To empower individuals and organizations through innovative IT solutions, comprehensive training programs, and seamless placement services. We strive to create opportunities that transform careers and drive business success.</p>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the most trusted and preferred partner for IT services, training, and global career opportunities. We envision a world where talent meets opportunity without boundaries, enabling professionals to achieve their dreams.</p>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Our Approach</h3>
+                        <p>We combine industry expertise with personalized attention to deliver exceptional results. Our approach focuses on understanding unique needs, providing tailored solutions, and maintaining long-term partnerships built on trust and excellence.</p>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Our Commitment</h3>
+                        <p>We are committed to delivering quality services, maintaining ethical practices, and ensuring client satisfaction. Every project, every candidate, and every partnership receives our dedicated attention and professional expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="values-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Core Values</h2>
+                    <div class="divider"></div>
+                    <p>The principles that guide everything we do</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p>We operate with honesty, transparency, and ethical practices in all our dealings.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Excellence</h3>
+                        <p>We strive for excellence in every service we deliver and every relationship we build.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Client Focus</h3>
+                        <p>Our clients' success is our success. We prioritize their needs and exceed expectations.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We embrace new technologies and creative solutions to stay ahead in the industry.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Passion</h3>
+                        <p>We are passionate about empowering careers and transforming businesses through technology.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Reach</h3>
+                        <p>We connect talent with opportunities worldwide, breaking geographical barriers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section section-padding">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Successful Placements</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Trained Professionals</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Partner Companies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Sireeshna Solutions</h2>
+                    <div class="divider"></div>
+                    <p>Discover what makes us the preferred choice for IT services and career solutions</p>
+                </div>
+                <div class="why-choose-grid">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h3>Industry Expertise</h3>
+                            <p>Years of experience in IT services, training, and recruitment. Our team understands the industry inside out and delivers solutions that work.</p>
+                        </div>
+                    </div>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h3>Personalized Approach</h3>
+                            <p>We don't believe in one-size-fits-all. Every client and candidate receives customized solutions tailored to their unique needs and goals.</p>
+                        </div>
+                    </div>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h3>Global Network</h3>
+                            <p>Strong connections with companies worldwide. We open doors to international opportunities and help you achieve your global career aspirations.</p>
+                        </div>
+                    </div>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h3>24/7 Support</h3>
+                            <p>Our dedicated support team is always available to assist you. From initial consultation to post-placement support, we're here for you.</p>
+                        </div>
+                    </div>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h3>Certified Training</h3>
+                            <p>Industry-recognized certifications and hands-on training programs designed by experts. Gain skills that employers actually want.</p>
+                        </div>
+                    </div>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h3>Proven Track Record</h3>
+                            <p>Thousands of successful placements and satisfied clients. Our results speak for themselves with a 98% satisfaction rate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section class="services-overview-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What We Offer</h2>
+                    <div class="divider"></div>
+                    <p>Comprehensive solutions for your technology and career needs</p>
+                </div>
+                <div class="services-overview-grid">
+                    <div class="service-overview-card">
+                        <div class="service-overview-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>IT Services</h3>
+                        <p>End-to-end technology solutions for businesses of all sizes.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Software Development</li>
+                            <li><i class="fas fa-check-circle"></i> Web & Mobile Apps</li>
+                            <li><i class="fas fa-check-circle"></i> Cloud Solutions</li>
+                            <li><i class="fas fa-check-circle"></i> IT Consulting</li>
+                        </ul>
+                    </div>
+                    <div class="service-overview-card">
+                        <div class="service-overview-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Training Programs</h3>
+                        <p>Industry-focused training to boost your technical skills.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Full Stack Development</li>
+                            <li><i class="fas fa-check-circle"></i> Data Science & AI</li>
+                            <li><i class="fas fa-check-circle"></i> Cloud Computing</li>
+                            <li><i class="fas fa-check-circle"></i> DevOps & Testing</li>
+                        </ul>
+                    </div>
+                    <div class="service-overview-card">
+                        <div class="service-overview-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Job Placements</h3>
+                        <p>Connect with top employers and land your dream job.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> IT Job Placements</li>
+                            <li><i class="fas fa-check-circle"></i> Non-IT Opportunities</li>
+                            <li><i class="fas fa-check-circle"></i> Resume Building</li>
+                            <li><i class="fas fa-check-circle"></i> Interview Preparation</li>
+                        </ul>
+                    </div>
+                    <div class="service-overview-card">
+                        <div class="service-overview-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h3>Visa Processing</h3>
+                        <p>Hassle-free visa assistance for global opportunities.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Work Visa Support</li>
+                            <li><i class="fas fa-check-circle"></i> Student Visa Guidance</li>
+                            <li><i class="fas fa-check-circle"></i> Documentation Help</li>
+                            <li><i class="fas fa-check-circle"></i> Application Processing</li>
+                        </ul>
+                    </div>
+                    <div class="service-overview-card">
+                        <div class="service-overview-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3>Career Counseling</h3>
+                        <p>Expert guidance to navigate your career path.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Career Assessment</li>
+                            <li><i class="fas fa-check-circle"></i> Skill Gap Analysis</li>
+                            <li><i class="fas fa-check-circle"></i> Career Planning</li>
+                            <li><i class="fas fa-check-circle"></i> Mentorship Programs</li>
+                        </ul>
+                    </div>
+                    <div class="service-overview-card">
+                        <div class="service-overview-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Corporate Solutions</h3>
+                        <p>Tailored services for business growth and success.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Talent Acquisition</li>
+                            <li><i class="fas fa-check-circle"></i> Corporate Training</li>
+                            <li><i class="fas fa-check-circle"></i> Staff Augmentation</li>
+                            <li><i class="fas fa-check-circle"></i> Project Outsourcing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo-section">
+                        <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                            alt="Sirishna Solutions Logo" class="footer-logo">
+                        <div class="footer-company-info">
+                            <span class="footer-company-name">SIREESHNA SOLUTIONS PVT LTD</span>
+                            <span class="footer-company-slogan">We Make IT Happen</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for IT services, professional training, job placements,
+                        and visa processing. We empower careers and businesses through technology and global
+                        opportunities.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li><a href="#">IT Services</a></li>
+                        <li><a href="#">IT Training Programs</a></li>
+                        <li><a href="#">IT Job Placements</a></li>
+                        <li><a href="#">Non-IT Job Placements</a></li>
+                        <li><a href="#">Visa Processing</a></li>
+                        <li><a href="#">Career Counseling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact Us</h5>
+                    <ul class="contact-info-footer">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Vijayawada, India</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>+919908576007 / +917997153114</span></li>
+                        <li><i class="fas fa-envelope"></i><span>sireeshnasolutions@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Sirishna Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navItems = document.querySelectorAll('.nav-links a');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const sidebarClose = document.querySelector('.sidebar-close');
+            const body = document.body;
+
+            function closeMenu() {
+                if (navLinks) {
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
+                }
+                if (navOverlay) {
+                    navOverlay.classList.remove('active');
+                }
+            }
+
+            function openMenu() {
+                if (navLinks) {
+                    navLinks.classList.add('active');
+                    body.classList.add('menu-open');
+                }
+                if (navOverlay) {
+                    navOverlay.classList.add('active');
+                }
+            }
+
+            function toggleMenu() {
+                if (navLinks && navLinks.classList.contains('active')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            }
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMenu();
+                });
+            }
+
+            if (sidebarClose) {
+                sidebarClose.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeMenu();
+                });
+            }
+
+            if (navOverlay) {
+                navOverlay.addEventListener('click', function() {
+                    closeMenu();
+                });
+            }
+
+            if (navItems && navItems.length > 0) {
+                navItems.forEach(function(item) {
+                    item.addEventListener('click', function(e) {
+                        setTimeout(function() {
+                            closeMenu();
+                        }, 100);
+                    });
+                });
+            }
+
+            document.addEventListener('click', function(e) {
+                if (navLinks && navLinks.classList.contains('active')) {
+                    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                        closeMenu();
+                    }
+                }
+            });
+
+            // Scroll Animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.story-card, .value-card, .why-choose-card, .service-overview-card').forEach(card => {
+                observer.observe(card);
+            });
+
+            // Counter Animation
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+
+            const animateCounter = (counter) => {
+                const target = parseInt(counter.innerText);
+                const increment = target / speed;
+                let count = 0;
+
+                const updateCount = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count) + (counter.innerText.includes('%') ? '%' : '+');
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = counter.innerText;
+                    }
+                };
+
+                updateCount();
+            };
+
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        animateCounter(counter);
+                        statsObserver.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => {
+                statsObserver.observe(counter);
+            });
+        });
+    </script>
+</body>
+</html>

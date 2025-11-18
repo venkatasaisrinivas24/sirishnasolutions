@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Sirishna Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
+        }
+
+        * {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        *,
+        *::before,
+        *::after {
+            max-width: 100%;
+        }
+
+        main {
+            padding-top: 160px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .container-flex {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+
+        .top-bar {
+            background-color: #0d47a1;
+            color: white;
+            padding: 8px 0;
+            font-size: 0.8rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social-media a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #64b5f6;
+        }
+
+        .main-nav {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0d47a1;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .company-slogan {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #666;
+            font-style: italic;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar-close,
+        .sidebar-header,
+        .nav-overlay {
+            display: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0d47a1;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10001;
+            background: transparent;
+            border: none;
+        }
+
+        .menu-toggle:hover {
+            background-color: #f0f0f0;
+            color: #0d47a1;
+        }
+
+        body.menu-open .menu-toggle {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .alert-bar {
+            background-color: white;
+            color: #dc3545;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 500;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+
+        .alert-bar .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 30s linear infinite;
+            padding-left: 100%;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Page Header */
+        .page-header {
+            background: url('images/hero.jpeg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 71, 161, 0.85) 0%, rgba(21, 101, 192, 0.75) 100%);
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .breadcrumb {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: #0d47a1;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-title .divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0d47a1, #64b5f6);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Services Overview Section */
+        .services-overview {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(50px);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .service-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 50px rgba(13, 71, 161, 0.2);
+        }
+
+        .service-card-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-card-image img {
+            transform: scale(1.15);
+        }
+
+        .service-card-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0d47a1;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-card-icon {
+            background: #0d47a1;
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .service-card-content {
+            padding: 35px 30px;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+
+        .service-card-content h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .service-card-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .service-features li i {
+            color: #0d47a1;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #0d47a1;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            background: #1565c0;
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(13, 71, 161, 0.3);
+        }
+
+        /* Detailed Services Section */
+        .detailed-services {
+            background: white;
+        }
+
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .service-detail.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .service-detail:nth-child(even) {
+            transform: translateX(50px);
+        }
+
+        .service-detail:nth-child(even) .service-detail-image {
+            order: 2;
+        }
+
+        .service-detail:nth-child(even) .service-detail-content {
+            order: 1;
+        }
+
+        .service-detail-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-detail:hover .service-detail-image img {
+            transform: scale(1.1);
+        }
+
+        .service-detail-content {
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+
+        .service-detail-content h3 {
+            font-size: 2.2rem;
+            color: #0d47a1;
+            margin-bottom: 20px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .service-detail-content p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .service-benefits {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #0d47a1;
+            margin-bottom: 25px;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+
+        .service-benefits h4 {
+            color: #0d47a1;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            word-wrap: break-word;
+        }
+
+        .service-benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-benefits ul li {
+            padding: 10px 0;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .service-benefits ul li i {
+            color: #0d47a1;
+            margin-top: 5px;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .service-benefits ul li strong {
+            word-wrap: break-word;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+        }
+
+        .why-choose-section .section-title h2,
+        .why-choose-section .section-title p {
+            color: white;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .why-choose-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .why-choose-card.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .why-choose-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .why-choose-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            color: #0d47a1;
+        }
+
+        .why-choose-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .why-choose-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: url('images/hero.jpeg') no-repeat center center/cover;
+            position: relative;
+            padding: 100px 0;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: #0d47a1;
+        }
+
+        .cta-btn-primary:hover {
+            background: #f5f5f5;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #0d47a1;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            height: 50px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .footer-company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-company-slogan {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #bdc3c7;
+            font-style: italic;
+        }
+
+        .footer-column h5 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            line-height: 1.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+
+        .footer-column ul a:hover {
+            color: #64b5f6;
+            padding-left: 5px;
+        }
+
+        .contact-info-footer li {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-footer i {
+            margin-right: 15px;
+            color: #64b5f6;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-socials {
+            margin-bottom: 15px;
+        }
+
+        .footer-socials a {
+            color: #bdc3c7;
+            font-size: 1.3rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: #64b5f6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            main {
+                padding-top: 150px;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .page-header {
+                height: 40vh;
+            }
+
+            .page-header h1 {
+                font-size: 2.8rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .service-detail {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-detail:nth-child(even) .service-detail-image,
+            .service-detail:nth-child(even) .service-detail-content {
+                order: initial;
+            }
+
+            .service-detail-content h3 {
+                font-size: 1.9rem;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .cta-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .menu-toggle {
+                display: block !important;
+                z-index: 10002 !important;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: white;
+                z-index: 10000;
+                overflow-y: auto;
+                box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+                padding: 70px 0 20px 0;
+                margin: 0;
+                transition: right 0.4s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .sidebar-close,
+            .sidebar-header {
+                display: block !important;
+            }
+
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 9998;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+            }
+
+            .nav-overlay.active {
+                display: block !important;
+                opacity: 1;
+            }
+
+            body.menu-open {
+                overflow: hidden;
+            }
+
+            .nav-links li {
+                margin: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 18px 30px;
+                border-left: 4px solid transparent;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                background-color: #e3f2fd;
+                border-left-color: #0d47a1;
+            }
+
+            .sidebar-close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                font-size: 1.5rem;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+
+            .sidebar-close:hover {
+                background-color: #f0f0f0;
+                color: #0d47a1;
+            }
+
+            .sidebar-header {
+                padding: 15px 30px;
+                border-bottom: 2px solid #0d47a1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: white;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+
+            .sidebar-header h3 {
+                font-size: 1.1rem;
+                color: #0d47a1;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            .container,
+            .container-flex {
+                padding: 0 15px;
+                margin: 0 auto;
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            .section-padding {
+                padding: 50px 0;
+                overflow: hidden;
+            }
+
+            .top-bar {
+                font-size: 0.75rem;
+                padding: 6px 0;
+            }
+
+            main {
+                padding-top: 140px;
+            }
+
+            .top-bar .container-flex {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+            }
+
+            .social-media {
+                display: flex;
+                justify-content: center;
+            }
+
+            .social-media a {
+                margin: 0 8px;
+            }
+
+            .main-nav {
+                padding: 10px 0;
+                min-height: 70px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo-img {
+                height: 45px;
+            }
+
+            .company-name {
+                font-size: clamp(0.85rem, 3vw, 1rem);
+                white-space: normal;
+                line-height: 1.1;
+            }
+
+            .company-slogan {
+                font-size: clamp(0.65rem, 2vw, 0.75rem);
+            }
+
+            .page-header {
+                height: 35vh;
+                padding: 0 15px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .page-header-content {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+                word-wrap: break-word;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+                word-wrap: break-word;
+            }
+
+            .breadcrumb {
+                font-size: 0.9rem;
+                word-wrap: break-word;
+            }
+
+            .section-title {
+                margin-bottom: 40px;
+                padding: 0 10px;
+                max-width: 100%;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+                word-wrap: break-word;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+                padding: 0 10px;
+                word-wrap: break-word;
+            }
+
+            .section-title .divider {
+                width: 60px;
+                height: 3px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                justify-items: center;
+            }
+
+            .service-card {
+                margin: 0 auto;
+                max-width: 100%;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .service-card-content {
+                text-align: center;
+            }
+
+            .service-features {
+                text-align: left;
+                display: inline-block;
+                max-width: 90%;
+            }
+
+            .service-card-image {
+                height: 220px;
+                width: 100%;
+            }
+
+            .service-card-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                top: 15px;
+                left: 15px;
+            }
+
+            .service-card-content {
+                padding: 25px 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .service-card-content h3 {
+                font-size: 1.4rem;
+                line-height: 1.3;
+            }
+
+            .service-card-content p {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            .service-features {
+                width: 100%;
+            }
+
+            .service-features li {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                padding: 6px 0;
+            }
+
+            .service-detail {
+                margin-bottom: 50px;
+                gap: 30px;
+                width: 100%;
+                justify-items: center;
+            }
+
+            .service-detail-content {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+            }
+
+            .service-detail-content h3,
+            .service-detail-content p {
+                text-align: center;
+            }
+
+            .service-benefits {
+                text-align: left;
+            }
+
+            .service-detail-content h3 {
+                font-size: 1.7rem;
+                margin-bottom: 15px;
+                line-height: 1.3;
+            }
+
+            .service-detail-content p {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .service-detail-image {
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            .service-detail-image img {
+                height: 280px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .service-benefits {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .service-benefits h4 {
+                font-size: 1.2rem;
+                line-height: 1.3;
+            }
+
+            .service-benefits ul {
+                width: 100%;
+            }
+
+            .service-benefits ul li {
+                font-size: 0.95rem;
+                padding: 8px 0;
+                line-height: 1.6;
+                width: 100%;
+            }
+
+            .service-benefits ul li strong {
+                display: inline;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                width: 100%;
+                overflow: hidden;
+                justify-items: center;
+            }
+
+            .why-choose-card {
+                padding: 30px 15px;
+                max-width: 100%;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .why-choose-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+
+            .why-choose-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .why-choose-card p {
+                font-size: 0.95rem;
+            }
+
+            .cta-section {
+                padding: 70px 0;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .cta-content {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+                padding: 0 10px;
+                word-wrap: break-word;
+            }
+
+            .cta-content p {
+                font-size: 1rem;
+                padding: 0 10px;
+                word-wrap: break-word;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .cta-btn {
+                width: 90%;
+                max-width: 300px;
+                text-align: center;
+                padding: 14px 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-column h5 {
+                font-size: 1.1rem;
+            }
+
+            .footer-column p,
+            .footer-column ul li {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            main {
+                padding-top: 130px;
+                overflow: hidden;
+            }
+
+            .container,
+            .container-flex {
+                padding: 0 12px;
+                margin: 0 auto;
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            .section-padding {
+                padding: 40px 0;
+                overflow: hidden;
+            }
+
+            .page-header {
+                height: 30vh;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            .page-header p {
+                font-size: 0.9rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                margin-bottom: 35px;
+            }
+
+            .section-title h2 {
+                font-size: 1.7rem;
+            }
+
+            .section-title p {
+                font-size: 0.95rem;
+            }
+
+            .service-card-image {
+                height: 200px;
+                width: 100%;
+            }
+
+            .service-card-content {
+                padding: 20px 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .service-card-content h3 {
+                font-size: 1.3rem;
+                line-height: 1.3;
+            }
+
+            .service-card-content p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .service-features {
+                width: 100%;
+            }
+
+            .service-features li {
+                font-size: 0.85rem;
+                line-height: 1.5;
+                padding: 5px 0;
+            }
+
+            .service-detail {
+                margin-bottom: 40px;
+            }
+
+            .service-detail-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-detail-content p {
+                font-size: 0.95rem;
+            }
+
+            .service-detail-image img {
+                height: 250px;
+            }
+
+            .service-benefits {
+                padding: 15px 12px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .service-benefits h4 {
+                font-size: 1.1rem;
+                line-height: 1.3;
+            }
+
+            .service-benefits ul {
+                width: 100%;
+            }
+
+            .service-benefits ul li {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                padding: 6px 0;
+            }
+
+            .why-choose-card {
+                padding: 30px 15px;
+            }
+
+            .why-choose-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+
+            .why-choose-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .why-choose-card p {
+                font-size: 0.9rem;
+            }
+
+            .cta-section {
+                padding: 60px 0;
+            }
+
+            .cta-content h2 {
+                font-size: 1.7rem;
+            }
+
+            .cta-content p {
+                font-size: 0.95rem;
+            }
+
+            .cta-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .footer-column h5 {
+                font-size: 1rem;
+            }
+
+            .footer-socials a {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Extra small devices (320px and below) */
+        @media (max-width: 360px) {
+            .logo-img {
+                height: 40px;
+            }
+
+            .company-name {
+                font-size: 0.8rem;
+            }
+
+            .company-slogan {
+                font-size: 0.6rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-card-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .service-detail-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .cta-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Tablets portrait (601px - 768px) */
+        @media (min-width: 601px) and (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* iPad / Tablets landscape (769px - 834px) */
+        @media (min-width: 769px) and (max-width: 834px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large tablets / Small laptops (835px - 992px) */
+        @media (min-width: 835px) and (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-choose-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Desktop (993px - 1200px) */
+        @media (min-width: 993px) and (max-width: 1200px) {
+            .container,
+            .container-flex {
+                max-width: 960px;
+            }
+        }
+
+        /* Large desktops (1201px - 1440px) */
+        @media (min-width: 1201px) and (max-width: 1440px) {
+            .container,
+            .container-flex {
+                max-width: 1140px;
+            }
+        }
+
+        /* Extra large desktops / 4K (1921px and above) */
+        @media (min-width: 1921px) {
+            .container,
+            .container-flex {
+                max-width: 1600px;
+            }
+
+            .page-header h1 {
+                font-size: 4.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 3.5rem;
+            }
+
+            .service-card-content {
+                padding: 45px 35px;
+            }
+
+            .service-detail-image img {
+                height: 500px;
+            }
+
+            .cta-content h2 {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container-flex">
+                <div class="contact-info">
+                    <span>Hotline / Cell: +919908576007 / +917997153114</span>
+                    <span>Email ID: sireeshnasolutions@gmail.com</span>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container-flex">
+                <div class="logo">
+                    <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                        alt="Sirishna Solutions Logo" class="logo-img">
+                    <div class="company-info">
+                        <span class="company-name">SIREESHNA SOLUTIONS PVT LTD</span>
+                        <span class="company-slogan">We Make IT Happen</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <div class="sidebar-header">
+                        <h3>Menu</h3>
+                    </div>
+                    <span class="sidebar-close"><i class="fas fa-times"></i></span>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-overlay"></div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="alert-bar">
+            <div class="scrolling-text">
+                🎉 New Batch Starting Soon! Enroll Now for IT Training Programs | Job Placement Assistance Available | Visa Processing Services for USA, Canada, UK & More
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Our Services</h1>
+                <p>Comprehensive IT Solutions & Training Programs</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / Services
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section class="services-overview section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What We Offer</h2>
+                    <div class="divider"></div>
+                    <p>Explore our comprehensive range of IT services and training programs designed to empower individuals and businesses</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- IT Services Card -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/itsevices.jpeg" alt="IT Services">
+                            <div class="service-card-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>IT Services</h3>
+                            <p>Comprehensive IT solutions including software development, web design, cloud services, and technical support for businesses of all sizes.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Custom Software Development</li>
+                                <li><i class="fas fa-check-circle"></i> Web & Mobile Applications</li>
+                                <li><i class="fas fa-check-circle"></i> Cloud Solutions</li>
+                                <li><i class="fas fa-check-circle"></i> IT Consulting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- IT Training Programs Card -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/itprograms.jpeg" alt="IT Training Programs">
+                            <div class="service-card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>IT Training Programs</h3>
+                            <p>Industry-focused training programs in latest technologies with hands-on experience and certification preparation.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Full Stack Development</li>
+                                <li><i class="fas fa-check-circle"></i> Data Science & AI</li>
+                                <li><i class="fas fa-check-circle"></i> Cloud Computing</li>
+                                <li><i class="fas fa-check-circle"></i> Cybersecurity</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- IT Job Placements Card -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/itjobplacements.jpeg" alt="IT Job Placements">
+                            <div class="service-card-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>IT Job Placements</h3>
+                            <p>Connect talented IT professionals with leading companies through our extensive recruitment network and placement services.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Resume Building</li>
+                                <li><i class="fas fa-check-circle"></i> Interview Preparation</li>
+                                <li><i class="fas fa-check-circle"></i> Job Matching</li>
+                                <li><i class="fas fa-check-circle"></i> Career Counseling</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Non-IT Placements Card -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/non it placements.jpeg" alt="Non-IT Placements">
+                            <div class="service-card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>Non-IT Placements</h3>
+                            <p>Comprehensive recruitment solutions for various industries including healthcare, finance, manufacturing, and more.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Healthcare Staffing</li>
+                                <li><i class="fas fa-check-circle"></i> Finance & Banking</li>
+                                <li><i class="fas fa-check-circle"></i> Manufacturing</li>
+                                <li><i class="fas fa-check-circle"></i> Retail & Hospitality</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Career Counselling Card -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/careercounselling.jpeg" alt="Career Counselling">
+                            <div class="service-card-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>Career Counselling</h3>
+                            <p>Expert guidance to help you make informed career decisions and achieve your professional goals.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Career Assessment</li>
+                                <li><i class="fas fa-check-circle"></i> Skill Development Plans</li>
+                                <li><i class="fas fa-check-circle"></i> Industry Insights</li>
+                                <li><i class="fas fa-check-circle"></i> Personal Branding</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Visa Processing Card -->
+                    <div class="service-card">
+                        <div class="service-card-image">
+                            <img src="images/visa.jpeg" alt="Visa Processing">
+                            <div class="service-card-icon">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>Visa Processing</h3>
+                            <p>Complete visa assistance for work, study, and immigration to USA, Canada, UK, Australia, and other countries.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Work Visa Assistance</li>
+                                <li><i class="fas fa-check-circle"></i> Student Visa Support</li>
+                                <li><i class="fas fa-check-circle"></i> Document Preparation</li>
+                                <li><i class="fas fa-check-circle"></i> Immigration Consulting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Services Section -->
+        <section class="detailed-services section-padding" id="detailed-services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Services In Detail</h2>
+                    <div class="divider"></div>
+                    <p>Discover how our services can transform your career and business</p>
+                </div>
+
+                <!-- IT Services Detail -->
+                <div class="service-detail" id="it-services-detail">
+                    <div class="service-detail-image">
+                        <img src="images/itsevices.jpeg" alt="IT Services Detail">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>IT Services</h3>
+                        <p>At Sirishna Solutions, we provide end-to-end IT services that help businesses leverage technology for growth and efficiency. Our team of experienced professionals delivers innovative solutions tailored to your specific needs.</p>
+                        <div class="service-benefits">
+                            <h4>Key Benefits</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> <strong>Custom Solutions:</strong> Tailored software development to meet your unique business requirements</li>
+                                <li><i class="fas fa-star"></i> <strong>Scalable Architecture:</strong> Build systems that grow with your business</li>
+                                <li><i class="fas fa-star"></i> <strong>24/7 Support:</strong> Round-the-clock technical assistance and maintenance</li>
+                                <li><i class="fas fa-star"></i> <strong>Latest Technologies:</strong> Stay ahead with cutting-edge tech solutions</li>
+                                <li><i class="fas fa-star"></i> <strong>Cost-Effective:</strong> Maximize ROI with efficient development processes</li>
+                            </ul>
+                        </div>
+                        <p>From web and mobile app development to cloud migration and DevOps implementation, we ensure your technology infrastructure supports your business objectives effectively.</p>
+                    </div>
+                </div>
+
+                <!-- IT Training Programs Detail -->
+                <div class="service-detail" id="training-detail">
+                    <div class="service-detail-image">
+                        <img src="images/itprograms.jpeg" alt="IT Training Programs Detail">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>IT Training Programs</h3>
+                        <p>Our comprehensive IT training programs are designed to equip you with in-demand skills that employers are looking for. With hands-on projects, real-world scenarios, and expert instructors, we prepare you for a successful career in technology.</p>
+                        <div class="service-benefits">
+                            <h4>Training Highlights</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> <strong>Industry-Relevant Curriculum:</strong> Learn the latest technologies and frameworks</li>
+                                <li><i class="fas fa-star"></i> <strong>Hands-On Projects:</strong> Build real applications and portfolios</li>
+                                <li><i class="fas fa-star"></i> <strong>Expert Instructors:</strong> Learn from industry professionals with years of experience</li>
+                                <li><i class="fas fa-star"></i> <strong>Flexible Learning:</strong> Online and offline classes to suit your schedule</li>
+                                <li><i class="fas fa-star"></i> <strong>Certification Support:</strong> Prepare for industry-recognized certifications</li>
+                                <li><i class="fas fa-star"></i> <strong>Job Assistance:</strong> Placement support upon course completion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IT Job Placements Detail -->
+                <div class="service-detail" id="placement-detail">
+                    <div class="service-detail-image">
+                        <img src="images/itjobplacements.jpeg" alt="IT Job Placements Detail">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>IT Job Placements</h3>
+                        <p>We bridge the gap between talented IT professionals and leading companies. Our extensive network and deep understanding of the IT industry enable us to match the right candidates with the right opportunities.</p>
+                        <div class="service-benefits">
+                            <h4>Placement Services Include</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> <strong>Resume Optimization:</strong> Professional resume writing and LinkedIn profile enhancement</li>
+                                <li><i class="fas fa-star"></i> <strong>Interview Coaching:</strong> Mock interviews and feedback sessions</li>
+                                <li><i class="fas fa-star"></i> <strong>Job Matching:</strong> Connect with companies that match your skills and aspirations</li>
+                                <li><i class="fas fa-star"></i> <strong>Salary Negotiation:</strong> Guidance on compensation discussions</li>
+                                <li><i class="fas fa-star"></i> <strong>Onboarding Support:</strong> Assistance during the transition to your new role</li>
+                            </ul>
+                        </div>
+                        <p>Whether you're a fresh graduate or an experienced professional, we help you find the perfect opportunity to advance your IT career.</p>
+                    </div>
+                </div>
+
+                <!-- Non-IT Placements Detail -->
+                <div class="service-detail" id="non-it-detail">
+                    <div class="service-detail-image">
+                        <img src="images/non it placements.jpeg" alt="Non-IT Placements Detail">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Non-IT Placements</h3>
+                        <p>Beyond IT, we offer comprehensive recruitment solutions across various industries. Our expertise spans healthcare, finance, manufacturing, retail, and more, connecting qualified professionals with leading organizations.</p>
+                        <div class="service-benefits">
+                            <h4>Industries We Serve</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> <strong>Healthcare:</strong> Doctors, nurses, medical technicians, and administrative staff</li>
+                                <li><i class="fas fa-star"></i> <strong>Finance & Banking:</strong> Accountants, financial analysts, and banking professionals</li>
+                                <li><i class="fas fa-star"></i> <strong>Manufacturing:</strong> Engineers, quality control, production managers</li>
+                                <li><i class="fas fa-star"></i> <strong>Retail & Hospitality:</strong> Store managers, customer service, hospitality staff</li>
+                                <li><i class="fas fa-star"></i> <strong>Education:</strong> Teachers, trainers, and educational administrators</li>
+                            </ul>
+                        </div>
+                        <p>Our personalized approach ensures that both candidates and employers find the perfect match for long-term success.</p>
+                    </div>
+                </div>
+
+                <!-- Career Counselling Detail -->
+                <div class="service-detail" id="counselling-detail">
+                    <div class="service-detail-image">
+                        <img src="images/careercounselling.jpeg" alt="Career Counselling Detail">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Career Counselling</h3>
+                        <p>Make informed career decisions with expert guidance from our experienced counselors. We help you identify your strengths, explore career options, and create a roadmap to achieve your professional goals.</p>
+                        <div class="service-benefits">
+                            <h4>Counselling Services</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> <strong>Career Assessment:</strong> Identify your skills, interests, and career aptitude</li>
+                                <li><i class="fas fa-star"></i> <strong>Goal Setting:</strong> Define clear, achievable career objectives</li>
+                                <li><i class="fas fa-star"></i> <strong>Skill Gap Analysis:</strong> Identify areas for improvement and development</li>
+                                <li><i class="fas fa-star"></i> <strong>Industry Insights:</strong> Stay informed about market trends and opportunities</li>
+                                <li><i class="fas fa-star"></i> <strong>Personal Branding:</strong> Build a strong professional identity</li>
+                                <li><i class="fas fa-star"></i> <strong>Career Transition:</strong> Navigate career changes with confidence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visa Processing Detail -->
+                <div class="service-detail" id="visa-detail">
+                    <div class="service-detail-image">
+                        <img src="images/visa.jpeg" alt="Visa Processing Detail">
+                    </div>
+                    <div class="service-detail-content">
+                        <h3>Visa Processing Services</h3>
+                        <p>Planning to work or study abroad? Our visa processing services simplify the complex immigration process. We provide end-to-end assistance for various visa categories across multiple countries.</p>
+                        <div class="service-benefits">
+                            <h4>Visa Services Include</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> <strong>Work Visas:</strong> H1B, L1, skilled worker visas for USA, Canada, UK, Australia</li>
+                                <li><i class="fas fa-star"></i> <strong>Student Visas:</strong> F1, study permits for international education</li>
+                                <li><i class="fas fa-star"></i> <strong>Document Preparation:</strong> Complete assistance with application forms and supporting documents</li>
+                                <li><i class="fas fa-star"></i> <strong>Interview Preparation:</strong> Mock interviews and guidance for visa interviews</li>
+                                <li><i class="fas fa-star"></i> <strong>Immigration Consulting:</strong> Expert advice on immigration pathways</li>
+                                <li><i class="fas fa-star"></i> <strong>Post-Arrival Support:</strong> Assistance with settling in your new country</li>
+                            </ul>
+                        </div>
+                        <p>With our expertise and proven track record, we make your dream of working or studying abroad a reality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Sirishna Solutions</h2>
+                    <div class="divider"></div>
+                    <p>What sets us apart in the industry</p>
+                </div>
+
+                <div class="why-choose-grid">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Industry Expertise</h3>
+                        <p>Years of experience delivering exceptional IT solutions and training programs</p>
+                    </div>
+
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Expert Team</h3>
+                        <p>Skilled professionals dedicated to your success and growth</p>
+                    </div>
+
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Personalized Approach</h3>
+                        <p>Customized solutions tailored to your unique needs and goals</p>
+                    </div>
+
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Proven Results</h3>
+                        <p>Track record of successful placements and satisfied clients</p>
+                    </div>
+
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Always available to assist you with any queries or concerns</p>
+                    </div>
+
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Network</h3>
+                        <p>Connections with leading companies and institutions worldwide</p>
+                    </div>
+
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Innovation Focus</h3>
+                        <p>Staying ahead with the latest technologies and methodologies</p>
+                    </div>
+
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Competitive Pricing</h3>
+                        <p>Quality services at affordable rates with transparent pricing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Let's discuss how we can help you achieve your goals</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="cta-btn cta-btn-primary">Contact Us Today</a>
+                        <a href="tel:+919908576007" class="cta-btn cta-btn-secondary">Call Now: +91 9908576007</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo-section">
+                        <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                            alt="Sirishna Solutions Logo" class="footer-logo">
+                        <div class="footer-company-info">
+                            <span class="footer-company-name">SIREESHNA SOLUTIONS PVT LTD</span>
+                            <span class="footer-company-slogan">We Make IT Happen</span>
+                        </div>
+                    </div>
+                    <p>Leading provider of IT services, training programs, and placement solutions. Empowering careers and businesses through technology.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li><a href="#it-services-detail">IT Services</a></li>
+                        <li><a href="#training-detail">IT Training</a></li>
+                        <li><a href="#placement-detail">Job Placements</a></li>
+                        <li><a href="#visa-detail">Visa Processing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Contact Info</h5>
+                    <ul class="contact-info-footer">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vijayawada, Andhra Pradesh, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9908576007<br>+91 7997153114</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sireeshnasolutions@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p>&copy; 2024 Sirishna Solutions Pvt Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const sidebarClose = document.querySelector('.sidebar-close');
+        const body = document.body;
+
+        function openMenu() {
+            navLinks.classList.add('active');
+            navOverlay.classList.add('active');
+            body.classList.add('menu-open');
+        }
+
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        sidebarClose.addEventListener('click', closeMenu);
+        navOverlay.addEventListener('click', closeMenu);
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Observe service details
+        document.querySelectorAll('.service-detail').forEach(detail => {
+            observer.observe(detail);
+        });
+
+        // Observe why choose cards
+        document.querySelectorAll('.why-choose-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 180;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add active class to current nav link
+        const currentPage = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

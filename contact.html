@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sirishna Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        main {
+            padding-top: 160px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .container-flex {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: white;
+        }
+
+        .top-bar {
+            background-color: #0d47a1;
+            color: white;
+            padding: 8px 0;
+            font-size: 0.8rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social-media a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #64b5f6;
+        }
+
+        .main-nav {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0d47a1;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .company-slogan {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #666;
+            font-style: italic;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hide sidebar elements on desktop */
+        .sidebar-close,
+        .sidebar-header,
+        .nav-overlay {
+            display: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0d47a1;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10001;
+            background: transparent;
+            border: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle:hover {
+            background-color: #f0f0f0;
+            color: #0d47a1;
+        }
+
+        .menu-toggle:active {
+            transform: scale(0.95);
+        }
+
+        .menu-toggle i {
+            display: block;
+        }
+
+        /* Hide menu toggle when sidebar is active */
+        body.menu-open .menu-toggle {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .alert-bar {
+            background-color: white;
+            color: #dc3545;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 500;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+
+        .alert-bar .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 30s linear infinite;
+            padding-left: 100%;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            background: url('images/hero.jpeg') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(13, 71, 161, 0.7);
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #0d47a1;
+            margin: 0 auto 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Contact Info Cards */
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #0d47a1;
+            font-size: 2rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .contact-card a {
+            color: #0d47a1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #1565c0;
+        }
+
+        /* Contact Form & Map Section */
+        .contact-form-section {
+            margin-bottom: 60px;
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.8rem;
+            color: #0d47a1;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0d47a1;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #0d47a1;
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+        }
+
+        .map-wrapper {
+            background: white;
+            padding: 30px 0;
+            margin-bottom: 40px;
+        }
+
+        .map-wrapper h3 {
+            font-size: 1.8rem;
+            color: #0d47a1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 500px;
+            border-radius: 0;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Business Hours */
+        .business-hours {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .business-hours h3 {
+            font-size: 1.8rem;
+            color: #0d47a1;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .time {
+            color: #666;
+        }
+
+        .time.closed {
+            color: #dc3545;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            height: 50px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .footer-company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-company-slogan {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #bdc3c7;
+            font-style: italic;
+        }
+
+        .footer-column h5 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            line-height: 1.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul a:hover {
+            color: #64b5f6;
+        }
+
+        .contact-info-footer li {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-footer i {
+            margin-right: 15px;
+            color: #64b5f6;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-socials {
+            margin-bottom: 15px;
+        }
+
+        .footer-socials a {
+            color: #bdc3c7;
+            font-size: 1.3rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: #64b5f6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            main {
+                padding-top: 150px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                width: 100%;
+                overflow: hidden;
+                justify-items: center;
+            }
+
+            .contact-card {
+                max-width: 100%;
+                overflow: hidden;
+                text-align: center;
+            }
+
+
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .menu-toggle {
+                display: block !important;
+                cursor: pointer;
+                z-index: 10002 !important;
+                position: relative;
+            }
+
+            /* Sidebar Navigation */
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: white;
+                text-align: left;
+                z-index: 10000;
+                overflow-y: auto;
+                box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+                padding: 70px 0 20px 0;
+                margin: 0;
+                list-style: none;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            /* Show sidebar elements on mobile */
+            .sidebar-close {
+                display: block !important;
+            }
+
+            .sidebar-header {
+                display: flex !important;
+            }
+
+            /* Sidebar Overlay */
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 9998;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+            }
+
+            .nav-overlay.active {
+                display: block !important;
+                opacity: 1;
+            }
+
+            body.menu-open {
+                overflow: hidden;
+            }
+
+            .nav-links li {
+                margin: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 18px 30px;
+                font-size: 1.05rem;
+                font-weight: 500;
+                color: #333;
+                transition: all 0.3s ease;
+                border-left: 4px solid transparent;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                background-color: #e3f2fd;
+                color: #0d47a1;
+                border-left-color: #0d47a1;
+                padding-left: 35px;
+            }
+
+            /* Close button in sidebar */
+            .sidebar-close {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                font-size: 1.5rem;
+                color: #333;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+                z-index: 10001;
+            }
+
+            .sidebar-close:hover {
+                background-color: #f0f0f0;
+                color: #0d47a1;
+            }
+
+            /* Sidebar Header */
+            .sidebar-header {
+                padding: 15px 30px;
+                border-bottom: 2px solid #0d47a1;
+                margin-bottom: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: white;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+
+            .sidebar-header h3 {
+                font-size: 1.1rem;
+                color: #0d47a1;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Global */
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            .container,
+            .container-flex {
+                padding: 0 15px;
+                margin: 0 auto;
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            /* Top Bar */
+            .top-bar {
+                font-size: 0.75rem;
+                padding: 6px 0;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            main {
+                padding-top: 140px;
+                overflow: hidden;
+            }
+
+            .top-bar .container-flex {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            /* Navigation */
+            .main-nav {
+                padding: 10px 0;
+                min-height: 70px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo-img {
+                height: 45px;
+            }
+
+            .company-name {
+                font-size: clamp(0.85rem, 3vw, 1rem);
+                white-space: normal;
+                line-height: 1.1;
+            }
+
+            .company-slogan {
+                font-size: clamp(0.65rem, 2vw, 0.75rem);
+            }
+
+            .page-header {
+                height: 30vh;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrapper {
+                padding: 30px 20px;
+            }
+
+            .map-wrapper {
+                padding: 20px 0;
+            }
+
+            .map-container {
+                height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding-top: 130px;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .company-name {
+                font-size: 0.8rem;
+            }
+
+            .company-slogan {
+                font-size: 0.6rem;
+            }
+
+            .page-header {
+                height: 25vh;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.85rem;
+            }
+
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .contact-form-wrapper h3,
+            .map-wrapper h3,
+            .business-hours h3 {
+                font-size: 1.4rem;
+            }
+
+            .submit-btn {
+                width: 100%;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Extra small devices (320px and below) */
+        @media (max-width: 320px) {
+            .company-name {
+                font-size: 0.75rem;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+        }
+
+        /* Tablets portrait (601px - 768px) */
+        @media (min-width: 601px) and (max-width: 768px) {
+            .contact-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* iPad / Tablets landscape (769px - 834px) */
+        @media (min-width: 769px) and (max-width: 834px) {
+            .contact-info-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Large tablets / Small laptops (835px - 992px) */
+        @media (min-width: 835px) and (max-width: 992px) {
+            .contact-info-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Desktop (993px - 1200px) */
+        @media (min-width: 993px) and (max-width: 1200px) {
+            .container,
+            .container-flex {
+                max-width: 960px;
+            }
+        }
+
+        /* Large desktops (1201px - 1440px) */
+        @media (min-width: 1201px) and (max-width: 1440px) {
+            .container,
+            .container-flex {
+                max-width: 1140px;
+            }
+        }
+
+        /* Extra large desktops / 4K (1921px and above) */
+        @media (min-width: 1921px) {
+            .container,
+            .container-flex {
+                max-width: 1600px;
+            }
+
+            .page-header h1 {
+                font-size: 4rem;
+            }
+
+            .section-title h2 {
+                font-size: 3.5rem;
+            }
+
+            .contact-card {
+                padding: 50px 40px;
+            }
+
+            .contact-card-icon {
+                width: 90px;
+                height: 90px;
+                font-size: 2.5rem;
+            }
+
+            .map-container {
+                height: 700px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container-flex">
+                <div class="contact-info">
+                    <span>Hotline / Cell: +919908576007 / +917997153114</span>
+                    <span>Email ID: sireeshnasolutions@gmail.com</span>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container-flex">
+                <div class="logo">
+                    <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                        alt="Sirishna Solutions Logo" class="logo-img">
+                    <div class="company-info">
+                        <span class="company-name">SIREESHNA SOLUTIONS PVT LTD</span>
+                        <span class="company-slogan">We Make IT Happen</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <div class="sidebar-header">
+                        <h3>Menu</h3>
+                    </div>
+                    <span class="sidebar-close"><i class="fas fa-times"></i></span>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="nav-overlay"></div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+            </div>
+        </div>
+
+        <div class="alert-bar">
+            <div class="scrolling-text">
+                🎉 New Batch Starting Soon! Enroll Now for IT Training Programs | Job Placement Assistance Available | Visa Processing Services for USA, Canada, UK & More
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Contact Us</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / Contact Us
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch With Us</h2>
+                    <div class="divider"></div>
+                    <p>We're here to help and answer any question you might have. We look forward to hearing from you!</p>
+                </div>
+
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>Vijayawada, Andhra Pradesh<br>India - 520001</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Phone Numbers</h3>
+                        <p>
+                            <a href="tel:+919908576007">+91 9908576007</a><br>
+                            <a href="tel:+917997153114">+91 7997153114</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Address</h3>
+                        <p>
+                            <a href="mailto:sireeshnasolutions@gmail.com">sireeshnasolutions@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <div class="contact-form-wrapper">
+                        <h3>Send Us A Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="it-services">IT Services</option>
+                                    <option value="it-training">IT Training Programs</option>
+                                    <option value="it-placement">IT Job Placements</option>
+                                    <option value="non-it-placement">Non-IT Job Placements</option>
+                                    <option value="visa-processing">Visa Processing</option>
+                                    <option value="career-counseling">Career Counseling</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-wrapper">
+            <div class="container">
+                <h3>Find Us On Map</h3>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244934.00196633!2d80.44517!3d16.5062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff9482d944b%3A0x939b7e84ab4a0265!2sVijayawada%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="contact-section" style="padding-top: 60px;">
+            <div class="container"></div>
+
+                <div class="business-hours">
+                    <h3>Business Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Tuesday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Wednesday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Thursday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Friday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Saturday</span>
+                            <span class="time">10:00 AM - 4:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Sunday</span>
+                            <span class="time closed">Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo-section">
+                        <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                            alt="Sirishna Solutions Logo" class="footer-logo">
+                        <div class="footer-company-info">
+                            <span class="footer-company-name">SIREESHNA SOLUTIONS PVT LTD</span>
+                            <span class="footer-company-slogan">We Make IT Happen</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for IT services, professional training, job placements,
+                        and visa processing. We empower careers and businesses through technology and global
+                        opportunities.</p>
+                </div>
+                <div class="footer-column">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li><a href="#">IT Services</a></li>
+                        <li><a href="#">IT Training Programs</a></li>
+                        <li><a href="#">IT Job Placements</a></li>
+                        <li><a href="#">Non-IT Job Placements</a></li>
+                        <li><a href="#">Visa Processing</a></li>
+                        <li><a href="#">Career Counseling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Contact Us</h5>
+                    <ul class="contact-info-footer">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Vijayawada, India</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>+919908576007 / +917997153114</span></li>
+                        <li><i class="fas fa-envelope"></i><span>sireeshnasolutions@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Sirishna Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Sidebar Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navItems = document.querySelectorAll('.nav-links a');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const sidebarClose = document.querySelector('.sidebar-close');
+            const body = document.body;
+
+            function closeMenu() {
+                if (navLinks) {
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
+                }
+                if (navOverlay) {
+                    navOverlay.classList.remove('active');
+                }
+            }
+
+            function openMenu() {
+                if (navLinks) {
+                    navLinks.classList.add('active');
+                    body.classList.add('menu-open');
+                }
+                if (navOverlay) {
+                    navOverlay.classList.add('active');
+                }
+            }
+
+            function toggleMenu() {
+                if (navLinks && navLinks.classList.contains('active')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            }
+
+            // Open menu on hamburger click
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMenu();
+                });
+            }
+
+            // Close menu on close button click
+            if (sidebarClose) {
+                sidebarClose.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeMenu();
+                });
+            }
+
+            // Close menu on overlay click
+            if (navOverlay) {
+                navOverlay.addEventListener('click', function() {
+                    closeMenu();
+                });
+            }
+
+            // Close menu when clicking on a link
+            if (navItems && navItems.length > 0) {
+                navItems.forEach(function(item) {
+                    item.addEventListener('click', function(e) {
+                        // Allow the link to work
+                        setTimeout(function() {
+                            closeMenu();
+                        }, 100);
+                    });
+                });
+            }
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (navLinks && navLinks.classList.contains('active')) {
+                    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                        closeMenu();
+                    }
+                }
+            });
+
+            // Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        service: document.getElementById('service').value,
+                        message: document.getElementById('message').value
+                    };
+
+                    // Here you would typically send the data to a server
+                    console.log('Form submitted:', formData);
+                    
+                    alert('Thank you for contacting us! We will get back to you soon.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

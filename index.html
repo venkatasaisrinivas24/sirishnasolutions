@@ -276,6 +276,12 @@
             display: block;
         }
 
+        /* Hide menu toggle when sidebar is active */
+        body.menu-open .menu-toggle {
+            opacity: 0;
+            pointer-events: none;
+        }
+
         /* Alert Bar */
         .alert-bar {
             background-color: white;
@@ -931,18 +937,64 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 40px;
             margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            max-width: 100%;
+        }
+
+        .footer-logo-section {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .footer-column .footer-logo {
             height: 50px;
             width: auto;
-            margin-bottom: 20px;
             display: block;
             -o-object-fit: contain;
             object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .footer-company-info {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-company-slogan {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #bdc3c7;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
         }
 
         .footer-column h5 {
@@ -1156,10 +1208,37 @@
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
+                width: 100%;
+                overflow: hidden;
+                justify-items: center;
+            }
+
+            .service-card {
+                max-width: 100%;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+
+            .service-card-img {
+                width: 100%;
+                overflow: hidden;
             }
 
             .service-card-img img {
                 height: 220px;
+                width: 100%;
+            }
+
+            .service-card-content {
+                width: 100%;
+                overflow: hidden;
+                padding: 25px 15px;
+                text-align: center;
+            }
+
+            .service-card-content h4,
+            .service-card-content p {
+                text-align: center;
             }
 
             /* Find Candidates Section */
@@ -1173,31 +1252,60 @@
 
             /* Footer */
             .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr 1fr;
                 gap: 30px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-company-name {
+                font-size: 1.1rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 0.8rem;
             }
         }
 
         /* Mobile devices (768px and below) */
         @media (max-width: 768px) {
             /* Global */
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
             .container,
             .container-flex {
                 padding: 0 15px;
+                margin: 0 auto;
+                max-width: 100%;
+                overflow: hidden;
             }
 
             .section-padding {
                 padding: 50px 0;
+                overflow: hidden;
             }
 
             /* Top Bar */
             .top-bar {
                 font-size: 0.75rem;
                 padding: 6px 0;
+                width: 100%;
+                overflow: hidden;
             }
 
             main {
                 padding-top: 140px;
+                overflow: hidden;
             }
 
             .top-bar .container-flex {
@@ -1546,8 +1654,25 @@
                 gap: 35px;
             }
 
+            .footer-brand {
+                grid-column: 1;
+            }
+
             .footer-logo {
                 height: 40px;
+            }
+
+            .footer-logo-section {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .footer-company-name {
+                font-size: 1rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 0.75rem;
             }
 
             .footer-column h5 {
@@ -1690,6 +1815,15 @@
 
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-logo-section {
+                flex-direction: row;
+                align-items: center;
             }
 
             .nav-links {
@@ -1893,8 +2027,20 @@
             }
 
             .footer-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: 2fr 1fr 1fr 1fr;
                 gap: 50px;
+            }
+
+            .footer-logo {
+                height: 60px;
+            }
+
+            .footer-company-name {
+                font-size: 1.4rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 1rem;
             }
         }
 
@@ -2200,7 +2346,20 @@
             }
 
             .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
                 gap: 80px;
+            }
+
+            .footer-logo {
+                height: 80px;
+            }
+
+            .footer-company-name {
+                font-size: 1.8rem;
+            }
+
+            .footer-company-slogan {
+                font-size: 1.2rem;
             }
 
             .footer-column h5 {
@@ -2282,7 +2441,7 @@
             }
 
             .footer-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: 2fr 1fr 1fr 1fr;
             }
         }
 
@@ -2356,7 +2515,7 @@
         <div class="top-bar">
             <div class="container-flex">
                 <div class="contact-info">
-                    <span>Hotline / Cell: 9908176007 / 9866201635</span>
+                    <span>Hotline / Cell: +919908576007 / +917997153114</span>
                     <span>Email ID: sireeshnasolutions@gmail.com</span>
                 </div>
             </div>
@@ -2378,10 +2537,10 @@
                         <h3>Menu</h3>
                     </div>
                     <span class="sidebar-close"><i class="fas fa-times"></i></span>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="nav-overlay"></div>
                 <div class="menu-toggle">
@@ -2469,7 +2628,7 @@
                         <p>Sirishna Solutions is your trusted partner for IT services, professional training, job
                             placements, and visa processing. We provide comprehensive solutions to help individuals and
                             businesses achieve their goals in the digital era.</p>
-                        <a href="#" class="talent-btn">Read more</a>
+                        <a href="about.html" class="talent-btn">Read more</a>
                     </div>
                 </div>
                 <div class="talent-row animated-card">
@@ -2482,7 +2641,7 @@
                             both IT and Non-IT sectors. We are dedicated to providing quality training, connecting
                             talented professionals with leading companies, and facilitating smooth visa processing for
                             global opportunities.</p>
-                        <a href="#" class="talent-btn">Read More</a>
+                        <a href="about.html" class="talent-btn">Read More</a>
                     </div>
                 </div>
                 <div class="talent-row animated-card reverse-mobile">
@@ -2492,7 +2651,7 @@
                             solutions, professional training, job placement assistance, or visa processing services, our
                             experienced team works closely with you to deliver tailored solutions that ensure success.
                         </p>
-                        <a href="#" class="talent-btn">Read More</a>
+                        <a href="about.html" class="talent-btn">Read More</a>
                     </div>
                     <div class="talent-image"><img
                             src="images/ourapproch.jpeg"
@@ -2534,7 +2693,7 @@
                             <h4>IT Services</h4>
                             <p>Comprehensive IT solutions including software development, web applications, cloud
                                 services, and technical support to help your business thrive in the digital landscape.
-                            </p><a href="#" class="talent-btn">Read More</a>
+                            </p><a href="services.html" class="talent-btn">Read More</a>
                         </div>
                     </div>
                     <div class="service-card animated-card">
@@ -2547,7 +2706,7 @@
                             <h4>IT Training Programs</h4>
                             <p>Professional training courses in latest technologies, programming languages, and IT
                                 certifications. Hands-on learning with industry experts to boost your technical skills.
-                            </p><a href="#" class="talent-btn">Read More</a>
+                            </p><a href="services.html" class="talent-btn">Read More</a>
                         </div>
                     </div>
                     <div class="service-card animated-card">
@@ -2560,7 +2719,7 @@
                             <h4>IT Job Placements</h4>
                             <p>Connect with top IT companies and secure your dream job. We provide end-to-end placement
                                 assistance including resume building, interview preparation, and job matching.</p><a
-                                href="#" class="talent-btn">Read More</a>
+                                href="services.html" class="talent-btn">Read More</a>
                         </div>
                     </div>
                     <div class="service-card animated-card">
@@ -2573,7 +2732,7 @@
                             <h4>Non-IT Job Placements</h4>
                             <p>Comprehensive job placement services across various industries including healthcare,
                                 finance, manufacturing, retail, and more. Find the right opportunity for your career
-                                growth.</p><a href="#" class="talent-btn">Read More</a>
+                                growth.</p><a href="services.html" class="talent-btn">Read More</a>
                         </div>
                     </div>
                     <div class="service-card animated-card">
@@ -2586,7 +2745,7 @@
                             <h4>All Types of Visa Processing</h4>
                             <p>Complete visa processing services for work visas, student visas, tourist visas, and
                                 immigration. Expert guidance and documentation support for hassle-free visa approval.
-                            </p><a href="#" class="talent-btn">Read More</a>
+                            </p><a href="services.html" class="talent-btn">Read More</a>
                         </div>
                     </div>
                     <div class="service-card animated-card">
@@ -2598,7 +2757,7 @@
                         <div class="service-card-content">
                             <h4>Career Counseling</h4>
                             <p>Professional career guidance and counseling services to help you make informed decisions
-                                about your career path, skill development, and global opportunities.</p><a href="#"
+                                about your career path, skill development, and global opportunities.</p><a href="services.html"
                                 class="talent-btn">Read More</a>
                         </div>
                     </div>
@@ -2617,13 +2776,13 @@
                         who want to make a difference in the technology and recruitment industry.</p>
                 </div>
                 <div class="openings-buttons">
-                    <a href="tel:9908176007" class="opening-btn">
+                    <a href="tel:+919908576007" class="opening-btn">
                         <i class="fas fa-phone-alt"></i><br>
-                        Call: 9908176007
+                        Call: +919908576007
                     </a>
-                    <a href="tel:9866201635" class="opening-btn">
+                    <a href="tel:+917997153114" class="opening-btn">
                         <i class="fas fa-mobile-alt"></i><br>
-                        Call: 9866201635
+                        Call: +917997153114
                     </a>
                     <a href="mailto:sireeshnasolutions@gmail.com" class="opening-btn">
                         <i class="fas fa-envelope"></i><br>
@@ -2638,10 +2797,16 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-column">
-                    <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
-                        alt="Sirishna Solutions Logo" class="footer-logo">
-                    <p>Sirishna Solutions - Your trusted partner for IT services, professional training, job placements,
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo-section">
+                        <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                            alt="Sirishna Solutions Logo" class="footer-logo">
+                        <div class="footer-company-info">
+                            <span class="footer-company-name">SIREESHNA SOLUTIONS PVT LTD</span>
+                            <span class="footer-company-slogan">We Make IT Happen</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for IT services, professional training, job placements,
                         and visa processing. We empower careers and businesses through technology and global
                         opportunities.</p>
                 </div>
@@ -2659,18 +2824,17 @@
                 <div class="footer-column">
                     <h5>Quick Links</h5>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Approach</a></li>
-                        <li><a href="#">Find a Job</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h5>Contact Us</h5>
                     <ul class="contact-info-footer">
-                        <li><i class="fas fa-map-marker-alt"></i><span>Vijayawada   , India</span></li>
-                        <li><i class="fas fa-phone-alt"></i><span>9908176007 / 9866201635</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span>Vijayawada, India</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>+919908576007 / +917997153114</span></li>
                         <li><i class="fas fa-envelope"></i><span>sireeshnasolutions@gmail.com</span></li>
                     </ul>
                 </div>
