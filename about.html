@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Sirishna Solutions</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -1696,6 +1698,67 @@
                 grid-template-columns: 2fr 1fr 1fr 1fr;
             }
         }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float i {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Mobile responsive for WhatsApp button */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                font-size: 24px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -1704,7 +1767,7 @@
         <div class="top-bar">
             <div class="container-flex">
                 <div class="contact-info">
-                    <span>Hotline / Cell: +919908576007 / +917997153114</span>
+                    <span>Hotline / Cell: +919908576007 / +917997153114 / +919866201635</span>
                     <span>Email ID: sireeshnasolutions@gmail.com</span>
                 </div>
                 <div class="social-media">
@@ -1719,7 +1782,7 @@
         <nav class="main-nav">
             <div class="container-flex">
                 <div class="logo">
-                    <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                    <img src="images/logo.png"
                         alt="Sirishna Solutions Logo" class="logo-img">
                     <div class="company-info">
                         <span class="company-name">SIREESHNA SOLUTIONS PVT LTD</span>
@@ -1745,7 +1808,7 @@
 
         <div class="alert-bar">
             <div class="scrolling-text">
-                🎉 New Batch Starting Soon! Enroll Now for IT Training Programs | Job Placement Assistance Available | Visa Processing Services for USA, Canada, UK & More
+                New Batch Starting Soon! Enroll Now for IT Training Programs | Job Placement Assistance Available | Visa Processing Services for USA, Canada, UK & More
             </div>
         </div>
     </header>
@@ -1764,13 +1827,13 @@
         <section class="ceo-section section-padding">
             <div class="container">
                 <div class="section-title">
-                    <h2>Meet Our CEO & Founder</h2>
+                    <h2>Meet Our Leadership Team</h2>
                     <div class="divider"></div>
                     <p>Visionary leadership driving innovation and excellence</p>
                 </div>
                 <div class="ceo-content">
                     <div class="ceo-image-wrapper">
-                        <img src="images/aboutus.jpeg" alt="Ramisetti Tejaswini Padmaja">
+                        <img src="images/ceo.png" alt="Ramisetti Tejaswini Padmaja">
                     </div>
                     <div class="ceo-info">
                         <h3>Ramisetti Tejaswini Padmaja</h3>
@@ -1788,9 +1851,40 @@
                             </div>
                             <div class="ceo-contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Vijayawada, India</span>
+                                <span>D.No:56-11-15, Chenupati Apparao Street, Patamata, Vijayawada - 520010</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Advisor Section -->
+        <section class="ceo-section section-padding" style="background-color: #ffffff;">
+            <div class="container">
+                <div class="ceo-content" style="grid-template-columns: 2fr 1fr;">
+                    <div class="ceo-info">
+                        <h3>Ramisetti Rajashekar</h3>
+                        <p class="position">Legal Advisor & Counsel</p>
+                        <p>Ramisetti Rajashekar brings extensive legal expertise to Sireeshna Solutions, specializing in corporate law, employment regulations, and visa documentation. His deep understanding of legal frameworks ensures that our clients receive comprehensive guidance for their business operations and international career opportunities.</p>
+                        <p>With a commitment to providing sound legal counsel, he plays a crucial role in safeguarding our clients' interests and ensuring compliance with all regulatory requirements. His expertise is particularly valuable in our visa processing and job placement services, where legal precision is paramount.</p>
+                        <div class="ceo-contact">
+                            <div class="ceo-contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+919866201635">+91 9866201635</a>
+                            </div>
+                            <div class="ceo-contact-item">
+                                <i class="fas fa-gavel"></i>
+                                <span>Legal Advisor</span>
+                            </div>
+                            <div class="ceo-contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>D.No:56-11-15, Chenupati Apparao Street, Patamata, Vijayawada - 520010</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ceo-image-wrapper">
+                        <img src="images/raja.png" alt="Ramisetti Rajashekar">
                     </div>
                 </div>
             </div>
@@ -2080,7 +2174,7 @@
             <div class="footer-grid">
                 <div class="footer-column footer-brand">
                     <div class="footer-logo-section">
-                        <img src="https://sireeshnasolutions.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-24-at-12.37.33-PM.jpeg"
+                        <img src="images/logo.png"
                             alt="Sirishna Solutions Logo" class="footer-logo">
                         <div class="footer-company-info">
                             <span class="footer-company-name">SIREESHNA SOLUTIONS PVT LTD</span>
@@ -2114,8 +2208,8 @@
                 <div class="footer-column">
                     <h5>Contact Us</h5>
                     <ul class="contact-info-footer">
-                        <li><i class="fas fa-map-marker-alt"></i><span>Vijayawada, India</span></li>
-                        <li><i class="fas fa-phone-alt"></i><span>+919908576007 / +917997153114</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span>D.No:56-11-15, Chenupati Apparao Street, Patamata, Vijayawada - 520010</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>+919908576007 / +917997153114 / +919866201635</span></li>
                         <li><i class="fas fa-envelope"></i><span>sireeshnasolutions@gmail.com</span></li>
                     </ul>
                 </div>
@@ -2265,5 +2359,14 @@
             });
         });
     </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919908576007?text=Hello%20Sirishna%20Solutions!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>
