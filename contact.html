@@ -34,7 +34,7 @@
         }
 
         main {
-            padding-top: 160px;
+            margin-top: 160px;
         }
 
         .container {
@@ -227,11 +227,14 @@
         .page-header {
             background: url('images/hero.jpeg') no-repeat center center/cover;
             height: 40vh;
+            min-height: 300px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
             color: white;
+            padding: 40px 20px;
         }
 
         .page-header::before {
@@ -248,17 +251,26 @@
             position: relative;
             z-index: 1;
             text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .page-header h1 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         .breadcrumb {
             font-size: 1rem;
             color: rgba(255, 255, 255, 0.9);
+            text-align: center;
         }
 
         .breadcrumb a {
@@ -612,7 +624,11 @@
         /* Responsive Design */
         @media (max-width: 992px) {
             main {
-                padding-top: 150px;
+                padding-top: 0;
+            }
+
+            .page-header {
+                margin-top: 160px;
             }
 
             .page-header h1 {
@@ -803,8 +819,12 @@
             }
 
             main {
-                padding-top: 140px;
+                padding-top: 0;
                 overflow: hidden;
+            }
+
+            .page-header {
+                margin-top: 155px;
             }
 
             .top-bar .container-flex {
@@ -843,7 +863,9 @@
             }
 
             .page-header {
-                height: 30vh;
+                height: 35vh;
+                min-height: 250px;
+                padding: 30px 20px;
             }
 
             .page-header h1 {
@@ -877,7 +899,11 @@
 
         @media (max-width: 480px) {
             main {
-                padding-top: 130px;
+                padding-top: 0;
+            }
+
+            .page-header {
+                margin-top: 145px;
             }
 
             .logo-img {
@@ -893,7 +919,9 @@
             }
 
             .page-header {
-                height: 25vh;
+                height: 30vh;
+                min-height: 220px;
+                padding: 25px 15px;
             }
 
             .page-header h1 {
@@ -1059,6 +1087,227 @@
                 font-size: 24px;
                 bottom: 15px;
                 right: 15px;
+            }
+        }
+
+        /* Custom Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            margin: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-header.success {
+            background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+        }
+
+        .modal-header.error {
+            background: linear-gradient(135deg, #c62828 0%, #e53935 100%);
+        }
+
+        .modal-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 35px;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .modal-body {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .modal-body p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+        }
+
+        .modal-contact-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .modal-contact-info p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .modal-contact-info strong {
+            color: #0d47a1;
+        }
+
+        .modal-footer {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+
+        .modal-btn {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 71, 161, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Modal */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                margin: 15px;
+            }
+
+            .modal-header {
+                padding: 20px 20px;
+            }
+
+            .modal-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+
+            .modal-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .modal-body {
+                padding: 25px 20px;
+            }
+
+            .modal-body p {
+                font-size: 0.95rem;
+            }
+
+            .modal-footer {
+                padding: 0 20px 25px;
+            }
+
+            .modal-btn {
+                padding: 10px 30px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                width: 90%;
+            }
+
+            .modal-header {
+                padding: 18px 15px;
+            }
+
+            .modal-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+            }
+
+            .modal-header h3 {
+                font-size: 1.1rem;
+            }
+
+            .modal-body {
+                padding: 20px 15px;
+            }
+
+            .modal-body p {
+                font-size: 0.9rem;
+            }
+
+            .modal-contact-info {
+                padding: 12px;
+            }
+
+            .modal-contact-info p {
+                font-size: 0.85rem;
+            }
+
+            .modal-footer {
+                padding: 0 15px 20px;
+            }
+
+            .modal-btn {
+                width: 100%;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -1331,9 +1580,7 @@
     <script>
         // Initialize EmailJS
         (function() {
-            emailjs.init({
-                publicKey: "qZvnYlYBa9dPkypTE",
-            });
+            emailjs.init("qZvnYlYBa9dPkypTE");
         })();
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -1402,7 +1649,6 @@
             if (navItems && navItems.length > 0) {
                 navItems.forEach(function(item) {
                     item.addEventListener('click', function(e) {
-                        // Allow the link to work
                         setTimeout(function() {
                             closeMenu();
                         }, 100);
@@ -1427,12 +1673,10 @@
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Disable submit button and show loading state
                     const originalBtnText = submitBtn.innerHTML;
                     submitBtn.disabled = true;
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                     
-                    // Get current date
                     const currentDate = new Date().toLocaleString('en-IN', {
                         timeZone: 'Asia/Kolkata',
                         year: 'numeric',
@@ -1442,7 +1686,6 @@
                         minute: '2-digit'
                     });
                     
-                    // Prepare template parameters
                     const templateParams = {
                         from_name: document.getElementById('name').value,
                         from_email: document.getElementById('email').value,
@@ -1452,35 +1695,98 @@
                         current_date: currentDate
                     };
 
-                    // Send notification email to company
-                    const notificationEmail = emailjs.send('service_mb9b7cd', 'template_ys4974z', templateParams);
-                    
-                    // Send auto-reply email to customer
-                    const autoReplyEmail = emailjs.send('service_mb9b7cd', 'template_0328cm4', templateParams);
-
-                    // Wait for both emails to be sent
-                    Promise.all([notificationEmail, autoReplyEmail])
-                        .then(function(responses) {
-                            console.log('Both emails sent successfully!', responses);
-                            alert('Thank you for contacting us! We have sent you a confirmation email. Our team will get back to you within 24-48 hours.');
+                    emailjs.send('service_mgp5kws', 'template_ys4974z', templateParams)
+                        .then(function(response) {
+                            return emailjs.send('service_mgp5kws', 'template_0328cm4', templateParams);
+                        })
+                        .then(function(response) {
+                            showModal(
+                                'success',
+                                'Message Sent Successfully!',
+                                'Thank you for contacting us! We have sent you a confirmation email. Our team will get back to you within 24-48 hours.',
+                                false
+                            );
                             contactForm.reset();
-                            
-                            // Reset button
                             submitBtn.disabled = false;
                             submitBtn.innerHTML = originalBtnText;
                         })
                         .catch(function(error) {
-                            console.error('Email sending failed:', error);
-                            alert('Oops! Something went wrong. Please try again or contact us directly at:\n\nPhone: +91 9908576007\nEmail: sireeshnasolutions@gmail.com');
-                            
-                            // Reset button
+                            showModal(
+                                'error',
+                                'Oops! Something Went Wrong',
+                                'We couldn\'t send your message. Please try again or contact us directly using the information below.',
+                                true
+                            );
                             submitBtn.disabled = false;
                             submitBtn.innerHTML = originalBtnText;
                         });
                 });
             }
         });
+
+        // Modal Functions
+        function showModal(type, title, message, showContact) {
+            const modal = document.getElementById('customModal');
+            const modalHeader = document.getElementById('modalHeader');
+            const modalIcon = document.getElementById('modalIcon');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const modalContactInfo = document.getElementById('modalContactInfo');
+
+            modalHeader.className = 'modal-header ' + type;
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            
+            if (type === 'success') {
+                modalIcon.innerHTML = '<i class="fas fa-check"></i>';
+            } else {
+                modalIcon.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+            }
+
+            if (showContact) {
+                modalContactInfo.style.display = 'block';
+            } else {
+                modalContactInfo.style.display = 'none';
+            }
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('customModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('customModal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
     </script>
+
+    <!-- Custom Modal -->
+    <div class="modal-overlay" id="customModal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <div class="modal-icon" id="modalIcon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h3 id="modalTitle">Success!</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Your message has been sent successfully.</p>
+                <div class="modal-contact-info" id="modalContactInfo" style="display: none;">
+                    <p><strong>Phone:</strong> +91 9908576007 / +91 7997153114 / +91 9866201635</p>
+                    <p><strong>Email:</strong> sireeshnasolutions@gmail.com</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/919908576007?text=Hello%20Sirishna%20Solutions!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 

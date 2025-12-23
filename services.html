@@ -47,7 +47,7 @@
         }
 
         main {
-            padding-top: 180px;
+            margin-top: 160px;
         }
 
         .container {
@@ -231,10 +231,12 @@
             height: 60vh;
             min-height: 400px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
             color: white;
+            padding: 40px 20px;
         }
 
         .page-header::before {
@@ -256,6 +258,10 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .page-header h1 {
@@ -841,7 +847,11 @@
         /* Responsive Design */
         @media (max-width: 992px) {
             main {
-                padding-top: 170px;
+                padding-top: 0;
+            }
+
+            .page-header {
+                margin-top: 165px;
             }
 
             .section-padding {
@@ -851,6 +861,7 @@
             .page-header {
                 height: 45vh;
                 min-height: 350px;
+                padding: 35px 20px;
             }
 
             .page-header h1 {
@@ -1057,7 +1068,11 @@
             }
 
             main {
-                padding-top: 160px;
+                padding-top: 0;
+            }
+
+            .page-header {
+                margin-top: 160px;
             }
 
             .top-bar .container-flex {
@@ -1107,7 +1122,7 @@
             .page-header {
                 height: 45vh;
                 min-height: 320px;
-                padding: 0 15px;
+                padding: 30px 15px;
                 width: 100%;
                 overflow: hidden;
             }
@@ -1414,8 +1429,12 @@
             }
 
             main {
-                padding-top: 150px;
+                padding-top: 0;
                 overflow: hidden;
+            }
+
+            .page-header {
+                margin-top: 155px;
             }
 
             .container,
@@ -1434,6 +1453,7 @@
             .page-header {
                 height: 40vh;
                 min-height: 280px;
+                padding: 25px 15px;
             }
 
             .page-header h1 {
