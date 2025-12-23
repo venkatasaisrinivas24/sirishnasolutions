@@ -4,7 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Sirishna Solutions</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Our Services - IT Training, Job Placements & Visa Processing | Sirishna Solutions</title>
+    <meta name="title" content="IT Services, Training, Job Placements & Visa Processing - Sirishna Solutions">
+    <meta name="description" content="Explore our comprehensive IT services: Professional IT training programs, IT & Non-IT job placements, visa processing for USA/Canada/UK, and career counseling in Vijayawada.">
+    <meta name="keywords" content="IT training courses, software training Vijayawada, job placement services, IT job placement, non-IT placements, visa processing services, USA visa, Canada visa, UK visa, career counseling, IT services Vijayawada">
+    <meta name="author" content="Sirishna Solutions Pvt Ltd">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sireeshnasolutions.in/services.html">
+    <meta property="og:title" content="IT Services, Training & Job Placements - Sirishna Solutions">
+    <meta property="og:description" content="Professional IT training, job placements, visa processing, and career counseling services in Vijayawada.">
+    <meta property="og:image" content="https://sireeshnasolutions.in/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sireeshnasolutions.in/services.html">
+    <meta property="twitter:title" content="IT Services, Training & Job Placements - Sirishna Solutions">
+    <meta property="twitter:description" content="Professional IT training, job placements, visa processing, and career counseling services.">
+    <meta property="twitter:image" content="https://sireeshnasolutions.in/images/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sireeshnasolutions.in/services.html">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="apple-touch-icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -1807,6 +1833,118 @@
                 right: 15px;
             }
         }
+
+        /* FAQ Accordion Styles */
+        .faq-section {
+            background-color: #f8f9fa;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .faq-question {
+            background: white;
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0d47a1;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e3f2fd;
+        }
+
+        .faq-question.active {
+            background: #0d47a1;
+            color: white;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: #0d47a1;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+            color: white;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 25px;
+            background: #f8f9fa;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 20px 25px;
+        }
+
+        .faq-answer p {
+            color: #555;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .faq-question {
+                padding: 15px 20px;
+                font-size: 1rem;
+            }
+
+            .faq-answer {
+                padding: 0 20px;
+            }
+
+            .faq-answer.active {
+                padding: 15px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faq-question {
+                padding: 12px 15px;
+                font-size: 0.95rem;
+            }
+
+            .faq-icon {
+                font-size: 1rem;
+            }
+
+            .faq-answer {
+                padding: 0 15px;
+            }
+
+            .faq-answer.active {
+                padding: 12px 15px;
+            }
+        }
     </style>
 </head>
 
@@ -1874,21 +2012,21 @@
         </section>
 
         <!-- Services Overview Section -->
-        <section class="services-overview section-padding">
+        <section class="services-overview section-padding" itemscope itemtype="https://schema.org/Service">
             <div class="container">
                 <div class="section-title">
-                    <h2>What We Offer</h2>
+                    <h2 itemprop="name">Professional IT Services & Training Programs in Vijayawada</h2>
                     <div class="divider"></div>
-                    <p>Explore our comprehensive range of IT services and training programs designed to empower individuals and businesses</p>
+                    <p itemprop="description">Explore our comprehensive range of IT services, software training programs, job placements, and visa processing designed to empower individuals and businesses in Vijayawada</p>
                 </div>
 
                 <div class="services-grid">
                     <!-- IT Services Card -->
-                    <div class="service-card">
+                    <div class="service-card" itemscope itemtype="https://schema.org/Service">
                         <div class="service-card-image">
-                            <img src="images/itsevices.jpeg" alt="IT Services">
+                            <img src="images/itsevices.jpeg" alt="IT Services and Solutions in Vijayawada" loading="lazy">
                             <div class="service-card-icon">
-                                <i class="fas fa-laptop-code"></i>
+                                <i class="fas fa-laptop-code" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="service-card-content">
@@ -2242,6 +2380,89 @@
         </section>
     </main>
 
+    <!-- FAQ Section -->
+    <section class="faq-section section-padding" itemscope itemtype="https://schema.org/FAQPage">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <div class="divider"></div>
+                <p>Common questions about our IT services, training programs, and job placement assistance</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span itemprop="name">What IT training courses do you offer in Vijayawada?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">We offer comprehensive IT training programs including software development, web development, data science, cloud computing, Python, Java, .NET, and various other programming languages. Our courses are designed for beginners to advanced professionals with hands-on practical training and real-world projects.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span itemprop="name">Do you provide 100% job placement assistance?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, we provide 100% job placement assistance for both IT and Non-IT positions. Our dedicated placement team works with top companies across India and abroad to ensure our students get the best career opportunities. We also provide interview preparation, resume building, and career counseling services.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span itemprop="name">Which countries do you process visas for?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">We process visas for USA, Canada, UK, Australia, Germany, and other major countries. Our experienced team handles all documentation including student visas, work visas, tourist visas, and immigration services. We provide complete guidance throughout the visa application process from documentation to interview preparation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span itemprop="name">What are the course durations and fees?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Course durations vary from 2 months to 6 months depending on the program. We offer flexible batch timings including weekend and weekday batches. For detailed fee structure and course information, please contact us at +91 9908576007 or visit our office. We also provide installment payment options.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span itemprop="name">What are your office hours and location?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">We are open Monday to Friday from 9:00 AM to 6:00 PM, and Saturday from 10:00 AM to 4:00 PM. We are closed on Sundays. Our office is located at D.No:56-11-15, Chenupati Apparao Street, Patamata, Vijayawada - 520010, Andhra Pradesh. You can reach us via phone at +91 9908576007 or WhatsApp during business hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span itemprop="name">Do you offer online training programs?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, we offer both classroom and online training programs. Our online courses include live interactive sessions, recorded lectures, practical assignments, and one-on-one mentoring. Students can access course materials 24/7 and get the same quality education from anywhere in India or abroad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span itemprop="name">What makes Sirishna Solutions different from other institutes?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">We offer a complete ecosystem of services including IT training, job placements, visa processing, and career counseling all under one roof. Our experienced trainers, industry-relevant curriculum, hands-on projects, 100% placement assistance, and personalized attention make us the preferred choice in Vijayawada. We focus on practical skills that employers demand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
@@ -2398,6 +2619,30 @@
                 link.classList.add('active');
             }
         });
+
+        // FAQ Accordion Toggle Function
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const answer = button.nextElementSibling;
+            const allQuestions = document.querySelectorAll('.faq-question');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            
+            // Close all other FAQs
+            allQuestions.forEach(q => {
+                if (q !== button) {
+                    q.classList.remove('active');
+                }
+            });
+            allAnswers.forEach(a => {
+                if (a !== answer) {
+                    a.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            button.classList.toggle('active');
+            answer.classList.toggle('active');
+        }
     </script>
 
     <!-- WhatsApp Floating Button -->
