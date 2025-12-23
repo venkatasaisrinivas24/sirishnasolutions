@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sireeshnasolutions.com/</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sireeshnasolutions.com/images/logo.png</image:loc>
+      <image:title>Sirishna Solutions Logo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://sireeshnasolutions.com/about.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sireeshnasolutions.com/images/ceo.png</image:loc>
+      <image:title>CEO - Ramisetti Tejaswini Padmaja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://sireeshnasolutions.com/services.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://sireeshnasolutions.com/images/itsevices.jpeg</image:loc>
+      <image:title>IT Services</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://sireeshnasolutions.com/contact.html</loc>
-    <lastmod>2025-01-23</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

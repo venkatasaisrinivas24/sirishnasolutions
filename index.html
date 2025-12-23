@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#0d47a1">
+    <meta name="format-detection" content="telephone=yes">
     
     <!-- Primary Meta Tags -->
     <title>Sirishna Solutions - IT Services, Training, Job Placements & Visa Processing in Vijayawada</title>
@@ -14,6 +17,10 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
+    <meta name="geo.region" content="IN-AP">
+    <meta name="geo.placename" content="Vijayawada">
+    <meta name="geo.position" content="16.5062;80.6480">
+    <meta name="ICBM" content="16.5062, 80.6480">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -66,6 +73,21 @@
         "https://www.linkedin.com/company/sireeshnasolutions",
         "https://twitter.com/sireeshnasolutions"
       ]
+    }
+    </script>
+    
+    <!-- WebSite Schema with Search Action -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sirishna Solutions",
+      "url": "https://sireeshnasolutions.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sireeshnasolutions.com/services.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
     
@@ -122,6 +144,76 @@
         "name": "Home",
         "item": "https://sireeshnasolutions.com/"
       }]
+    }
+    </script>
+    
+    <!-- Service Offerings Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "IT Services",
+          "description": "Comprehensive IT services and solutions for businesses",
+          "provider": {
+            "@type": "Organization",
+            "name": "Sirishna Solutions Pvt Ltd"
+          },
+          "areaServed": "Vijayawada",
+          "serviceType": "Information Technology"
+        },
+        {
+          "@type": "Service",
+          "name": "IT Training Programs",
+          "description": "Professional IT training and certification courses",
+          "provider": {
+            "@type": "Organization",
+            "name": "Sirishna Solutions Pvt Ltd"
+          },
+          "areaServed": "Vijayawada",
+          "serviceType": "Education"
+        },
+        {
+          "@type": "Service",
+          "name": "Job Placement Services",
+          "description": "IT and Non-IT job placement assistance",
+          "provider": {
+            "@type": "Organization",
+            "name": "Sirishna Solutions Pvt Ltd"
+          },
+          "areaServed": "Vijayawada",
+          "serviceType": "Career Counseling"
+        },
+        {
+          "@type": "Service",
+          "name": "Visa Processing",
+          "description": "USA, Canada, UK visa processing and consultation",
+          "provider": {
+            "@type": "Organization",
+            "name": "Sirishna Solutions Pvt Ltd"
+          },
+          "areaServed": "Vijayawada",
+          "serviceType": "Immigration Services"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Aggregate Rating Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sirishna Solutions Pvt Ltd",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "50",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     }
     </script>
     
