@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sireeshnasolutions.in/sitemap.xml
+Sitemap: https://sireeshnasolutions.com/sitemap.xml
 
 # Disallow admin or private directories if any
 # Disallow: /admin/

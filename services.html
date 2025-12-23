@@ -15,24 +15,67 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sireeshnasolutions.in/services.html">
+    <meta property="og:url" content="https://sireeshnasolutions.com/services.html">
     <meta property="og:title" content="IT Services, Training & Job Placements - Sirishna Solutions">
     <meta property="og:description" content="Professional IT training, job placements, visa processing, and career counseling services in Vijayawada.">
-    <meta property="og:image" content="https://sireeshnasolutions.in/images/logo.png">
+    <meta property="og:image" content="https://sireeshnasolutions.com/images/logo.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sireeshnasolutions.in/services.html">
+    <meta property="twitter:url" content="https://sireeshnasolutions.com/services.html">
     <meta property="twitter:title" content="IT Services, Training & Job Placements - Sirishna Solutions">
     <meta property="twitter:description" content="Professional IT training, job placements, visa processing, and career counseling services.">
-    <meta property="twitter:image" content="https://sireeshnasolutions.in/images/logo.png">
+    <meta property="twitter:image" content="https://sireeshnasolutions.com/images/logo.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://sireeshnasolutions.in/services.html">
+    <link rel="canonical" href="https://sireeshnasolutions.com/services.html">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://sireeshnasolutions.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://sireeshnasolutions.com/services.html"
+      }]
+    }
+    </script>
+    
+    <!-- Course Schema for Training Programs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "IT Training Programs",
+      "description": "Comprehensive IT training courses including software development, programming, and certification programs in Vijayawada",
+      "provider": {
+        "@type": "Organization",
+        "name": "Sirishna Solutions Pvt Ltd",
+        "sameAs": "https://sireeshnasolutions.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "category": "Professional Training"
+      }
+    }
+    </script>
+    
+    <!-- Font Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -1969,7 +2012,7 @@
             <div class="container-flex">
                 <div class="logo">
                     <img src="images/logo.png"
-                        alt="Sirishna Solutions Logo" class="logo-img">
+                        alt="Sirishna Solutions Logo" class="logo-img" width="200" height="60">
                     <div class="company-info">
                         <span class="company-name">SIREESHNA SOLUTIONS PVT LTD</span>
                         <span class="company-slogan">We Make IT Happen</span>
@@ -2044,7 +2087,7 @@
                     <!-- IT Training Programs Card -->
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="images/itprograms.jpeg" alt="IT Training Programs">
+                            <img src="images/itprograms.jpeg" alt="IT Training Programs" loading="lazy" width="400" height="300">
                             <div class="service-card-icon">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
@@ -2064,7 +2107,7 @@
                     <!-- IT Job Placements Card -->
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="images/itjobplacements.jpeg" alt="IT Job Placements">
+                            <img src="images/itjobplacements.jpeg" alt="IT Job Placements" loading="lazy" width="400" height="300">
                             <div class="service-card-icon">
                                 <i class="fas fa-briefcase"></i>
                             </div>
@@ -2084,7 +2127,7 @@
                     <!-- Non-IT Placements Card -->
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="images/non it placements.jpeg" alt="Non-IT Placements">
+                            <img src="images/non it placements.jpeg" alt="Non-IT Placements" loading="lazy" width="400" height="300">
                             <div class="service-card-icon">
                                 <i class="fas fa-users"></i>
                             </div>
@@ -2104,7 +2147,7 @@
                     <!-- Career Counselling Card -->
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="images/careercounselling.jpeg" alt="Career Counselling">
+                            <img src="images/careercounselling.jpeg" alt="Career Counselling" loading="lazy" width="400" height="300">
                             <div class="service-card-icon">
                                 <i class="fas fa-user-tie"></i>
                             </div>
@@ -2124,7 +2167,7 @@
                     <!-- Visa Processing Card -->
                     <div class="service-card">
                         <div class="service-card-image">
-                            <img src="images/visa.jpeg" alt="Visa Processing">
+                            <img src="images/visa.jpeg" alt="Visa Processing" loading="lazy" width="400" height="300">
                             <div class="service-card-icon">
                                 <i class="fas fa-passport"></i>
                             </div>
@@ -2156,7 +2199,7 @@
                 <!-- IT Services Detail -->
                 <div class="service-detail" id="it-services-detail">
                     <div class="service-detail-image">
-                        <img src="images/itsevices.jpeg" alt="IT Services Detail">
+                        <img src="images/itsevices.jpeg" alt="IT Services Detail" loading="lazy" width="600" height="400">
                     </div>
                     <div class="service-detail-content">
                         <h3>IT Services</h3>
@@ -2178,7 +2221,7 @@
                 <!-- IT Training Programs Detail -->
                 <div class="service-detail" id="training-detail">
                     <div class="service-detail-image">
-                        <img src="images/itprograms.jpeg" alt="IT Training Programs Detail">
+                        <img src="images/itprograms.jpeg" alt="IT Training Programs Detail" loading="lazy" width="600" height="400">
                     </div>
                     <div class="service-detail-content">
                         <h3>IT Training Programs</h3>
@@ -2200,7 +2243,7 @@
                 <!-- IT Job Placements Detail -->
                 <div class="service-detail" id="placement-detail">
                     <div class="service-detail-image">
-                        <img src="images/itjobplacements.jpeg" alt="IT Job Placements Detail">
+                        <img src="images/itjobplacements.jpeg" alt="IT Job Placements Detail" loading="lazy" width="600" height="400">
                     </div>
                     <div class="service-detail-content">
                         <h3>IT Job Placements</h3>
@@ -2222,7 +2265,7 @@
                 <!-- Non-IT Placements Detail -->
                 <div class="service-detail" id="non-it-detail">
                     <div class="service-detail-image">
-                        <img src="images/non it placements.jpeg" alt="Non-IT Placements Detail">
+                        <img src="images/non it placements.jpeg" alt="Non-IT Placements Detail" loading="lazy" width="600" height="400">
                     </div>
                     <div class="service-detail-content">
                         <h3>Non-IT Placements</h3>
@@ -2244,7 +2287,7 @@
                 <!-- Career Counselling Detail -->
                 <div class="service-detail" id="counselling-detail">
                     <div class="service-detail-image">
-                        <img src="images/careercounselling.jpeg" alt="Career Counselling Detail">
+                        <img src="images/careercounselling.jpeg" alt="Career Counselling Detail" loading="lazy" width="600" height="400">
                     </div>
                     <div class="service-detail-content">
                         <h3>Career Counselling</h3>
@@ -2266,7 +2309,7 @@
                 <!-- Visa Processing Detail -->
                 <div class="service-detail" id="visa-detail">
                     <div class="service-detail-image">
-                        <img src="images/visa.jpeg" alt="Visa Processing Detail">
+                        <img src="images/visa.jpeg" alt="Visa Processing Detail" loading="lazy" width="600" height="400">
                     </div>
                     <div class="service-detail-content">
                         <h3>Visa Processing Services</h3>
@@ -2470,7 +2513,7 @@
                 <div class="footer-column footer-brand">
                     <div class="footer-logo-section">
                         <img src="images/logo.png"
-                            alt="Sirishna Solutions Logo" class="footer-logo">
+                            alt="Sirishna Solutions Logo" class="footer-logo" loading="lazy" width="150" height="45">
                         <div class="footer-company-info">
                             <span class="footer-company-name">SIREESHNA SOLUTIONS PVT LTD</span>
                             <span class="footer-company-slogan">We Make IT Happen</span>
